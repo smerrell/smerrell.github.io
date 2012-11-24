@@ -14,7 +14,7 @@ awesome. Acutally, the blog itself is really a pretty good read with lots of
 good information for several editors that are worth checking out.
 
 So why exactly am I writing a post about Sublime Text 2? Well because I thought
-it would be something interesting. Oh and since I'm pretty solidly a Vim user,
+it would be something interesting. That and since I'm pretty solidly a Vim user,
 I thought it might be time to at least try some other Editors. Well, that and
 my boss [Corey](http://coreykaylor.com/) has been pretty excited about Sublime
 for a while now. Excited enough that as a team for our morning learning we
@@ -90,10 +90,17 @@ this, but the first reaction I had to it was WAT?
 ## But Seriously
 
 I've only been using Sublime for about a week and it does seem like a pretty
-good editor. There are a lot of things that I like when compared to Vim. Am I
-going to start using Sublime as my primary text editor? I really don't know. To
-me, putting my Vim setup together just right felt a lot like a Jedi building
-their own lightsaber (nerdy, I know) so I have to admit I have a strong
-emotional attachment to Vim. Still though, it doesn't mean that other editors
-don't have a lot of value to offer so I think I'm going to try and make more of
-a conscious effort to get to know Sublime more and see where things go.
+good editor. There are a lot of things that I like when compared to Vim. The
+built in snippets and code completion features are pretty nice, as well as its
+overall speed. Since I've only been using it for about a week I haven't even had
+much time to really dig into Sublime and most of its features. When I first
+started with Vim it took me months before I felt like I was really being
+productive with it.
+
+So the big question, am I going to start using Sublime as my primary text
+editor? I really don't know. To me, putting my Vim setup together just right
+felt a lot like a Jedi building their own lightsaber (nerdy, I know) so I have
+to admit I have a strong emotional attachment to Vim. Still though, it doesn't
+mean that other editors don't have a lot of value to offer so I think I'm going
+to try and make more of a conscious effort to get to know Sublime more and see
+where things go.
