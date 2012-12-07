@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "An Important Career Decision I've Learned"
+title: "Looking Back: Development Retrospective"
 date: 2012-12-01 15:08
 comments: true
 categories: [career, softwaredev]
@@ -28,13 +28,13 @@ November was my two year anniversary at Extend Health and looking back at those 
 
 It really is hard to count all the ways that I've grown since I've started at Extend Health. I've been able to try out a new project using CQRS and Event Sourcing which has been a really fun project to learn from. Along with that, I've gotten to use Git full time and recently been able to use GitHub Enterprise as well. I get to work with great people who are way smarter than I am so I'm always learning new ways to be better.
 
-I've also learned how important it is to work at a place with great people. With great people working with you, it makes all the difference in the world.
+I've also learned how important it is to work at a place with great people. With great people working with you, it makes all the difference in the world. Learning flows much more easily and work becomes much more enjoyable when you're around people as motivated as you are. It also makes learning so much fun when you have so many thing to learn from everyone you work with instead of teaching everyone else what you know.
 
 # Where I See Myself Going
 
-Enough looking backwards, what do I see looking forward? Well, that is definitely a good question. One I don't really know for sure all the details, but I do have some general ideas. Mostly I'd really like to beef up my skills as a developer even more and focus more on really giving back to the Open Source community. I've done some help with FubuMVC but I want to do more and make some more diverse contributions to other projects.
+Enough looking backwards, what do I see looking forward? Honestly, I don't really know for exactly but I do have some general ideas. Mostly I'd really like to beef up my skills as a developer and focus more on really giving back to the Open Source community. I've done some work with FubuMVC but I want to do more and make some more diverse contributions to other projects and open source tools that have made my life better as a developer.
 
-Along with that, I'd love to just grow myself in the areas of business. I know that just having programming skills is not enough. I need to learn more about business and how I can help to improve the companies I work for. Code is really just a small part about what I can do. The more domain knowledge I have, and the more quickly I can learn that, the better I can make things valuable to the business and to people using the software I've helped write.
+Along with that, I'd love to expand my skills in the areas of business. I know that just having programming skills is not enough. I need to learn more about business and how I can help to improve the companies I work for. Code is really just a small part about what I can do. The more domain knowledge I have, and the more quickly I can learn that, the better I can make things valuable to the business and to people using the software I've helped write.
 
 # What I've learned
 
