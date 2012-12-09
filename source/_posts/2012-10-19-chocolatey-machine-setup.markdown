@@ -16,7 +16,7 @@ For GitHub, they use what they call [The Setup](https://speakerdeck.com/u/wfarr/
 which is a Ruby script that uses Puppet to manage all their machines. When I had
 first looked at Puppet a couple years ago, Windows support was not an option. It
 appears that this has changed. While we investigate using Puppet, my friend Kyle
-and I have begun setting up a system that uses [Chocolatey](chocolatey.org) and
+and I have begun setting up a system that uses [Chocolatey](http://chocolatey.org) and
 straight PowerShell to set up our Windows boxes.
 
 So what exactly is Chocolatey? Chocolatey is a package manager designed for
