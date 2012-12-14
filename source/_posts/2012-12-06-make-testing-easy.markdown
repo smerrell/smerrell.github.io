@@ -3,7 +3,7 @@ layout: post
 title: "Make Testing Easy"
 date: 2012-12-06 23:26
 comments: true
-categories: [testing, bestpractices]
+categories: [testing]
 ---
 
 Testing. We all know that we should do it, and yet often times we find
@@ -18,13 +18,13 @@ helps he suggested it would be a possible blog post topic, so thanks Ryan).
 
 # When I Test
 
-At Extend Health, I've been working on a project for quite some time now. I
-got the privilege to start out with a new greenfield project and have watched
-it transform over the last year. When we first started out, we had to keep our
-business process running by pretty much glue and duct tape to make it through
-the Annual Enrollment Period. Those were rough times filled with taking an
-existing Microsoft Access project and getting it to talk to SQL server on the
-backend so the data was at least in one place.
+At Extend Health, I've been working on a specific project for quite some time
+now. I got the privilege to start out with a new greenfield project and have
+watched it transform over the last year. When we first started out, we had to
+keep our business process running by pretty much glue and duct tape to make it
+through the Annual Enrollment Period. Those were rough times filled with
+taking an existing Microsoft Access project and getting it to talk to SQL
+server on the backend so the data was at least in one place.
 
 It was rough, but interestingly we were determined to keep things tested.
 Since basically all logic had to go into the DB at the time, we looked at SQL
@@ -40,9 +40,10 @@ often we wrote test first. Not always, but a good portion of the time anyway.
 # Then Things Get Hard
 
 After working on my last project, I got some time to add to a large project we
-have based around WPF and Caliburn. This is when I noticed I started to throw
-my testing habits out the window and just cowboy code everything. But why
-would I throw the benefits of testing away?
+have based around WPF and [Caliburn](http://caliburn.codeplex.com/). This is
+when I noticed I started to throw my testing habits out the window and just
+cowboy code everything. But why would I knowingly throw testing out the
+window?
 
 Then I sat down and thought about it. What was the main thing that I was using
 to justify my lack of tests, even though I know I should be doing them? It
