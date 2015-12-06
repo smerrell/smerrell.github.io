@@ -11,14 +11,14 @@ fancybox: true
 # Sidebar
 sidebar: right
 widgets:
+- recent_posts
+- archive
 - category
 - tag
 - tagcloud
-- archive
-- recent_posts
 
 # Miscellaneous
-google_analytics:
+google_analytics: UA-35739428-1
 favicon: /favicon.png
 twitter: smerrell
 google_plus:
