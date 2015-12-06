@@ -83,7 +83,3 @@ the file in its entirety and you can find it on
 [GitHub](https://github.com/smerrell/dotfiles/blob/master/bin/view-remote) as
 well. Feel free to borrow the script and use it if you find it useful. I'd love
 to get some feedback on ways to improve what I have so far.
-
-{% codeblock view-repository lang:bash https://github.com/smerrell/dotfiles/blob/master/bin/view-remote view-repository on GitHub %}
-{% github smerrell/dotfiles d1c997ffea4c04e6e4b53c8c5552b75bfcb6cd73 %}
-{% endcodeblock %}
