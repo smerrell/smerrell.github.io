@@ -3,7 +3,9 @@ layout: post
 title: "Automate project suckage away"
 date: 2012-11-02 16:23
 comments: true
-categories: [automation, dev-setup]
+tags:
+- automation
+- dev-setup
 ---
 
 How much tedious work is involved in setting up and developing individual

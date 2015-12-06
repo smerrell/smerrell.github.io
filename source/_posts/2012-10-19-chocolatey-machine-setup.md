@@ -3,7 +3,9 @@ layout: post
 title: "Chocolatey machine setup"
 date: 2012-10-19 22:42
 comments: true
-categories: [automation, dev-setup]
+tags:
+- automation
+- dev-setup
 ---
 
 How well automated is your machine setup process? After watching Zach Holman's

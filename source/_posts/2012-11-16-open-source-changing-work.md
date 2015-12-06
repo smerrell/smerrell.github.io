@@ -3,7 +3,10 @@ layout: post
 title: "Open Source Changing How We Work"
 date: 2012-11-16 00:30
 comments: true
-categories: [thoughts, random, opensource]
+tags:
+- thoughts
+- random
+- opensource
 ---
 
 I may have a bit of an obsession with GitHub right now, and no not GitHub the

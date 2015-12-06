@@ -3,7 +3,10 @@ layout: post
 title: "Shell Scripting and Git Fun"
 date: 2012-10-26 16:48
 comments: true
-categories: [bash, git, shell-scripting]
+tags:
+- bash
+- git
+- shell-scripting
 ---
 
 This afternoon I got the urge to whip up a quick script to help me when using

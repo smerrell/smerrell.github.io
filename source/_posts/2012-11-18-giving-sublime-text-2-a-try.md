@@ -3,7 +3,9 @@ layout: post
 title: "Giving Sublime Text 2 A Try"
 date: 2012-11-18 20:10
 comments: true
-categories: [sublimetext, editors]
+tags:
+- sublimetext
+- editors
 ---
 
 Looks like [Rob Conery](http://wekeroad.com/) got back in the blogging mood and

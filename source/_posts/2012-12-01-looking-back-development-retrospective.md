@@ -3,7 +3,9 @@ layout: post
 title: "Looking Back: Development Retrospective"
 date: 2012-12-01 15:08
 comments: true
-categories: [career, softwaredev]
+tags:
+- career
+- softwaredev
 ---
 
 I'm in a bit of a retrospective mood so this post is going to be focusing on

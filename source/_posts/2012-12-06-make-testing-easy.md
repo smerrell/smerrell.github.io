@@ -3,7 +3,8 @@ layout: post
 title: "Make Testing Easy"
 date: 2012-12-06 23:26
 comments: true
-categories: [testing]
+tags:
+- testing
 ---
 
 Testing. We all know that we should do it, and yet often times we find

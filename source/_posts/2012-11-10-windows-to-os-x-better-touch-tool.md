@@ -3,7 +3,9 @@ layout: post
 title: "Windows to OS X: BetterTouchTool"
 date: 2012-11-10 12:13
 comments: true
-categories: [OSX, Tools]
+tags:
+- OSX
+- Tools
 ---
 
 Not too long ago I finally got myself a new laptop, and this time I decided to
