@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://smerrell.github.io/"/>
-  <updated>2015-12-06T20:00:46.000Z</updated>
+  <updated>2015-12-24T00:47:29.000Z</updated>
   <id>http://smerrell.github.io/</id>
   
   <author>
@@ -15,11 +15,76 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Learning Rust as a C# Developer]]></title>
+    <link href="http://smerrell.github.io/2015/12/23/learning-rust-as-a-csharp-developer/"/>
+    <id>http://smerrell.github.io/2015/12/23/learning-rust-as-a-csharp-developer/</id>
+    <published>2015-12-24T00:47:29.000Z</published>
+    <updated>2015-12-24T00:47:29.000Z</updated>
+    <content type="html"><![CDATA[<p>Choosing a new programming language to learn is difficult. What do I want to
+focus on? Do I want to learn something low level like C? Do I want to go all out
+functional and learn Haskell? What about Go? Everyone seems to be glowing about
+that language. Elixir? I hear Rubyists are really digging on that language, and
+it is built on top of Erlang! So many choices!</p>
+<p>As you’ve probably guessed from the title, I ended up picking the <a href="https://rust-lang.org" target="_blank" rel="external">Rust
+programming language</a> as the language I’d like to focus
+on and learn about. So lets take a little bit of time to talk about why I made
+that choice.</p>
+<h2 id="A_way_to_delve_into_“systems_programming”">A way to delve into “systems programming”</h2><p>“Systems programming” feels like this mythical place of expert developers
+writing bare metal code to do things I can barely even understad. It is so
+different from my day-to-day job that it feels almost unattainable. I’ve never
+written anything in assembly, I can’t really read hex, and I’ve only barely
+tried to write anything in C. It really feels like such a daunting task to get
+into what seems like such a complicated topic.</p>
+<p>Fortunatly, Rust really feels like an accessible language that could get me
+learning about systems programming. I can learn how to manage my own memory, how
+to write performant code, how to work safely with pointers and many other “low
+level” bits of code. For whatever reason, Rust just feels like I can jump in and
+actually do something. I haven’t felt that way with C or C++.</p>
+<h2 id="A_C_replacement">A C replacement</h2><p>I swear, one day I actually am going to get around to learning C. When I do I’m
+going to do it <a href="http://c.learncodethehardway.org/book/" target="_blank" rel="external">the hard way</a>. But until
+I do, one of the reasons I picked Rust is that it is explicitly aimed at
+replacing C and C++ as the programming language of choice for prople writing
+performance critical or low level code. I’ve started and quickly stopped
+learning C and I haven’t found the motivation yet to stick with it and really
+learn the language. I’m sure I will eventually, but I think the barrier to entry
+has still been too high for me.</p>
+<p>With Rust, I have been able to get going pretty quickly in the language and
+start to learn bits and pieces about Rust while doing interesting things. I’m
+sure I could also do this with C, but so far I just haven’t had the willpower to
+stick with it. Rust, on the other hand, has kept me very interested and very
+motivated to learn the language.</p>
+<h2 id="No_GC">No GC</h2><p>Another specific reason I chose Rust was that I wanted to try out a language
+that does no garbage collection for me. Throughout my career as a developer I’ve
+worked in a garbage collected language, and honestly it is pretty awesome most
+of the time. But, since it is the only thing I’ve used before and I want to
+learn lower level programming skills, I have to learn how to walk away from
+garbage collection and learn how to manage memory myself.</p>
+<h2 id="Modern_language_features">Modern language features</h2><p>As a final deciding factor, the language features that Rust provides are very
+compelling to me. Generics are available and I am familiar with how to use them
+in C#, Traits (i.e. Interfaces for C# people), pattern matching, etc. are all
+language features that feel very compelling and interesting to use.</p>
+<p>So there you have it, a few of the reasons that I’ve decided to spend time
+really trying to dig in and learn the Rust programming language. I have much to
+learn and will likely be sporadically sharing what I’ve come across so far here
+on this blog.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Choosing a new programming language to learn is difficult. What do I want to
+focus on? Do I want to learn something low level like C? Do ]]>
+    </summary>
+    
+      <category term="csharp" scheme="http://smerrell.github.io/tags/csharp/"/>
+    
+      <category term="rust" scheme="http://smerrell.github.io/tags/rust/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Agile is Hard]]></title>
     <link href="http://smerrell.github.io/2012/12/14/agile-is-hard/"/>
     <id>http://smerrell.github.io/2012/12/14/agile-is-hard/</id>
     <published>2012-12-14T23:00:00.000Z</published>
-    <updated>2015-12-06T20:00:46.000Z</updated>
+    <updated>2015-12-24T00:44:26.000Z</updated>
     <content type="html"><![CDATA[<p>Agile. Such a broad topic with so much to discuss and so much already discussed.
 It really is one of those topics you can go on about forever. So how am I going
 to put my spin on things? Well, I’m not I’m just going to talk about what I’ve
@@ -102,7 +167,7 @@ It really is one of those topics you can go on about for]]>
     <link href="http://smerrell.github.io/2012/12/06/make-testing-easy/"/>
     <id>http://smerrell.github.io/2012/12/06/make-testing-easy/</id>
     <published>2012-12-07T06:26:00.000Z</published>
-    <updated>2015-12-06T20:00:11.000Z</updated>
+    <updated>2015-12-24T00:44:26.000Z</updated>
     <content type="html"><![CDATA[<p>Testing. We all know that we should do it, and yet often times we find
 ourselves struggling to stay consistent in testing our code. I know that I
 personally find it difficult sometimes to really stick to and test my code,
@@ -176,7 +241,7 @@ ourselves struggling to stay consistent in testing our code. I kno]]>
     <link href="http://smerrell.github.io/2012/12/01/looking-back-development-retrospective/"/>
     <id>http://smerrell.github.io/2012/12/01/looking-back-development-retrospective/</id>
     <published>2012-12-01T22:08:00.000Z</published>
-    <updated>2015-12-06T20:00:02.000Z</updated>
+    <updated>2015-12-24T00:44:26.000Z</updated>
     <content type="html"><![CDATA[<p>I’m in a bit of a retrospective mood so this post is going to be focusing on
 the things I’ve learned so far in software development. And no, mostly not
 specific code things I’ve learned. There will be other posts for that.</p>
@@ -274,7 +339,7 @@ the things I’ve learned so far in software development. And ]]>
     <link href="http://smerrell.github.io/2012/11/18/giving-sublime-text-2-a-try/"/>
     <id>http://smerrell.github.io/2012/11/18/giving-sublime-text-2-a-try/</id>
     <published>2012-11-19T03:10:00.000Z</published>
-    <updated>2015-12-06T19:58:09.000Z</updated>
+    <updated>2015-12-24T00:44:26.000Z</updated>
     <content type="html"><![CDATA[<p>Looks like <a href="http://wekeroad.com/" target="_blank" rel="external">Rob Conery</a> got back in the blogging mood and
 picked a rather interesting subject. His topic? The holy war prone land of text
 editors Though I will say, his title for the post <a href="http://wekeroad.com/2012/11/18/code-editor-thunderdome" target="_blank" rel="external">Code Editor
@@ -369,7 +434,7 @@ picked a rather]]>
     <link href="http://smerrell.github.io/2012/11/16/open-source-changing-work/"/>
     <id>http://smerrell.github.io/2012/11/16/open-source-changing-work/</id>
     <published>2012-11-16T07:30:00.000Z</published>
-    <updated>2015-12-06T19:59:45.000Z</updated>
+    <updated>2015-12-24T00:44:26.000Z</updated>
     <content type="html"><![CDATA[<p>I may have a bit of an obsession with GitHub right now, and no not GitHub the
 product, I mean GitHub the company. I’ve posted about how I’ve been inspired by
 GitHub’s automation and even got my coworkers to watch <a href="http://zachholman.com/talk/unsucking-your-teams-development-environment" target="_blank" rel="external">Zach Holman’s</a>
@@ -477,7 +542,7 @@ product, I mean GitHub the company. I’ve posted about how I]]>
     <link href="http://smerrell.github.io/2012/11/10/windows-to-os-x-better-touch-tool/"/>
     <id>http://smerrell.github.io/2012/11/10/windows-to-os-x-better-touch-tool/</id>
     <published>2012-11-10T19:13:00.000Z</published>
-    <updated>2015-12-06T19:59:23.000Z</updated>
+    <updated>2015-12-24T00:44:26.000Z</updated>
     <content type="html"><![CDATA[<p>Not too long ago I finally got myself a new laptop, and this time I decided to
 get the 15” MacBook Pro Retina. I’ve been using Windows 7 primarily the last
 couple years since my work laptop has been the only machine I have had. Previous
@@ -542,7 +607,7 @@ get the 15” MacBook Pro Retina. I’ve been using Windows 7 ]]>
     <link href="http://smerrell.github.io/2012/11/02/automate-project-suckage-away/"/>
     <id>http://smerrell.github.io/2012/11/02/automate-project-suckage-away/</id>
     <published>2012-11-02T22:23:00.000Z</published>
-    <updated>2015-12-06T19:59:09.000Z</updated>
+    <updated>2015-12-24T00:44:26.000Z</updated>
     <content type="html"><![CDATA[<p>How much tedious work is involved in setting up and developing individual
 projects at your work? In my <a href="/blog/2012/10/19/chocolatey-machine-setup">first post</a>
 I wrote about how much tedious work is involved in setting up a new machine, now
@@ -615,7 +680,7 @@ projects at your work? In my <a href="/blog/2012/10/19/chocolat]]>
     <link href="http://smerrell.github.io/2012/10/26/shell-scripting-and-git-fun/"/>
     <id>http://smerrell.github.io/2012/10/26/shell-scripting-and-git-fun/</id>
     <published>2012-10-26T22:48:00.000Z</published>
-    <updated>2015-12-06T19:58:52.000Z</updated>
+    <updated>2015-12-24T00:44:26.000Z</updated>
     <content type="html"><![CDATA[<p>This afternoon I got the urge to whip up a quick script to help me when using
 git and a GitHub hosted repository. Quite often I want to look at the GitHub
 page of a project I’m working on when I’m sitting on the command line in the
@@ -684,7 +749,7 @@ git and a GitHub hosted repository. Quite often I want to l]]>
     <link href="http://smerrell.github.io/2012/10/19/chocolatey-machine-setup/"/>
     <id>http://smerrell.github.io/2012/10/19/chocolatey-machine-setup/</id>
     <published>2012-10-20T04:42:00.000Z</published>
-    <updated>2015-12-06T19:58:32.000Z</updated>
+    <updated>2015-12-24T00:44:26.000Z</updated>
     <content type="html"><![CDATA[<p>How well automated is your machine setup process? After watching Zach Holman’s
 excellent video <a href="http://zachholman.com/talk/unsucking-your-teams-development-environment" target="_blank" rel="external">Unsucking Your Teams Development Environment</a>
 I got to thinking about the setup process we have at Extend Health (who is
