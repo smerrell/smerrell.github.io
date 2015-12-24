@@ -1,9 +1,11 @@
 title: 'Learning Rust as a C# Developer'
-s: learning-rust-as-a-csharp-developer
 tags:
-- rust
-- csharp
+  - rust
+  - csharp
+s: learning-rust-as-a-csharp-developer
+date: 2015-12-23 17:47:29
 ---
+
 
 Choosing a new programming language to learn is difficult. What do I want to
 focus on? Do I want to learn something low level like C? Do I want to go all out
