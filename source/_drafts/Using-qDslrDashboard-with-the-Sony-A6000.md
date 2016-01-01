@@ -41,17 +41,26 @@ but there you go, all the steps to get the Smart Remote Control updated.
 
 ## Getting qDslrDashboard and the a6000 working together
 
-Connect your device to the Wifi network created by the camera.
+To get the a6000 to be controlled remotely, you have to open the Smart Remote
+Control application. This is as simple as going from `Meny -> Applications ->
+Application List -> Smart Remote Control`. Once you open the Smart Remote
+Control app, the a6000 will create a WiFi network. Simply connect your device to
+that network using the SSID and Password from the screen and the camera will
+start in remote control mode.
 
-Once you do that, you can tap the sony button. The first time I tried, I had to
-tap it a couple times and then it finally connected. At first I had though I had
-wasted the 10 dollars on the qdslrdashboard ios app, but it finally worked.
+This is where it gets a little odd with the qDslrDashboard app.
+
+{% asset_img sony-wireless-connection.jpg Tap the button until it works %}
+
+The first tap of the Sony Wireless button has not worked for me, I often have to
+press multiple times until it works. A little weird, but it does eventually
+work!
 
 
 So far, I barely know how to work it, but I was able to get it to take a
 timelapse after fiddling with it for a bit.
 
-**How to convert the images to a gif**
+## Turning the images into a gif
 
 Show how to use imagemagick to convert to a gif
 
@@ -63,6 +72,6 @@ for file in *.jpg do;
 done
 ```
 
-**How to make a movie out of the images**
+## Turning the images into a movie
 
 Show how to use ffmpeg to make a movie from the images
