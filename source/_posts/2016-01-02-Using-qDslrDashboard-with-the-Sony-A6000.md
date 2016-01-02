@@ -1,8 +1,10 @@
 title: Using qDslrDashboard with the Sony a6000
 tags:
-- photography
-- sony-a6000
+  - photography
+  - sony-a6000
+date: 2016-01-02 12:11:15
 ---
+
 
 Most of my posts are going to be something technology related but I _do_ happen
 to have other interests. For a while now, I've had a Sony a6000 that I've been
