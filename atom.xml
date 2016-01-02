@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://smerrell.github.io/"/>
-  <updated>2015-12-24T00:47:29.000Z</updated>
+  <updated>2016-01-02T19:11:15.000Z</updated>
   <id>http://smerrell.github.io/</id>
   
   <author>
@@ -13,6 +13,143 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Using qDslrDashboard with the Sony a6000]]></title>
+    <link href="http://smerrell.github.io/2016/01/02/Using-qDslrDashboard-with-the-Sony-A6000/"/>
+    <id>http://smerrell.github.io/2016/01/02/Using-qDslrDashboard-with-the-Sony-A6000/</id>
+    <published>2016-01-02T19:11:15.000Z</published>
+    <updated>2016-01-02T19:11:15.000Z</updated>
+    <content type="html"><![CDATA[<p>Most of my posts are going to be something technology related but I <em>do</em> happen
+to have other interests. For a while now, I’ve had a Sony a6000 that I’ve been
+very happy with. I’m very much an amateur at photography but I find it fun and I
+like the images I get of my family more than the ones I can get from my iPhone.
+So I’ve been slowly trying to level up my photography skills. I’m definitely not
+over 9000 yet, but maybe one day I’ll get there.</p>
+<p>This Christmas, I finally got a tripod and it has gotten me interested in trying
+to do some time lapse photography. Sony has a time lapse app but I wanted to see
+what other options were out there. After a bit of Googling, I came across
+<a href="http://dslrdashboard.info" target="_blank" rel="external">DslrDashboard</a>. Confusingly, the apps have been
+renamed to qDslrDashboard, but there is an app for just about every platform.</p>
+<p>Since I own two iDevices, I went ahead and threw down the $10 it cost for the
+iOS app. At first, I was hoping to find a free option to do time lapse, but I
+definitely feel better giving a developer my ten dollars instead of just throwing
+it at Sony. Since I didn’t have my iPad right on hand, I started trying things
+out with my iPhone. It took me a while to figure out how to get the app to work
+with my phone, and honestly, I’m still not 100% sure how to get the thing to
+work consistently every time. Here’s what it took me to get my camera and my
+iPhone running the qDslrDashboard app running.</p>
+<ul>
+<li>Go to <a href="https://www.playmemoriescameraapps.com/portal/" target="_blank" rel="external">https://www.playmemoriescameraapps.com/portal/</a></li>
+<li>Create an account (PlayStation Network account, ugh.)</li>
+<li>Go to <code>Menu -&gt; Applications</code><img src="/2016/01/02/Using-qDslrDashboard-with-the-Sony-A6000/application-list.jpg" alt="application list on the a6000" title="application list on the a6000"></li>
+<li>Select <code>PlayMemories Camera Apps</code><img src="/2016/01/02/Using-qDslrDashboard-with-the-Sony-A6000/playmemories-camera-apps.jpg" alt="application select PlayMemories
+    Camera Apps on the a6000" title="application select PlayMemories
+    Camera Apps on the a6000"></li>
+<li>Find Smart Remote Control app</li>
+<li>Install it</li>
+</ul>
+<p>I still feel pretty gross about having to create a PlayStation Network account,
+but there you go, all the steps to get the Smart Remote Control updated.</p>
+<h2 id="Getting_qDslrDashboard_and_the_a6000_working_together">Getting qDslrDashboard and the a6000 working together</h2><p>To get the a6000 to be controlled remotely, you have to open the Smart Remote
+Control application. This is as simple as going from <code>Meny -&gt; Applications -&gt;
+Application List -&gt; Smart Remote Control</code>. Once you open the Smart Remote
+Control app, the a6000 will create a WiFi network. Simply connect your device to
+that network using the SSID and Password from the screen and the camera will
+start in remote control mode.</p>
+<p>This is where it gets a little odd with the qDslrDashboard app.</p>
+<img src="/2016/01/02/Using-qDslrDashboard-with-the-Sony-A6000/sony-wireless-connection.jpg" alt="Tap the button until it works" title="Tap the button until it works">
+<p>The first tap of the Sony Wireless button has not worked for me, I often have to
+press multiple times until it works. A little weird, but it does eventually
+work!</p>
+<p>Once you’ve tapped the Sony wireless connection button enough times, you’ll be
+greeted with this screen of buttons. I don’t know for sure if qDslrDashboard
+defaults to using a live view, but if it does you’ll see what the camera is
+seeing as well. Otherwise you can tap the little <code>Lv</code> button in the top left
+corner.</p>
+<p>To get to the time lapse portion, you need to tap the time lapse button on the
+right.</p>
+<img src="/2016/01/02/Using-qDslrDashboard-with-the-Sony-A6000/time-lapse.jpg" alt="the time lapse button" title="the time lapse button">
+<p>The time lapse screen has a whole bunch of options to choose from. In the image
+below, I captured a sample, it then displays a bunch of information about the
+image you took to help you figure out what settings you’ll need to make the time
+lapse. I don’t know what much of that means, but one day I will!</p>
+<img src="/2016/01/02/Using-qDslrDashboard-with-the-Sony-A6000/time-lapse-screen.jpg" alt="the time lapse screen" title="the time lapse screen">
+<p>At the most basic level, you really just need to scroll down and click the
+stopwatch icon. The stopwatch icon will let you configure the interval timer
+which is the heart of doing the time lapse.</p>
+<img src="/2016/01/02/Using-qDslrDashboard-with-the-Sony-A6000/interval-timer.jpg" alt="the time lapse interval timer screen" title="the time lapse interval timer screen">
+<p>Setting the interval timer is pretty simple, but you do have to think a little
+bit about it. When I first set it up, I wasn’t really reading what the screen
+was trying to tell me. I set a frame count and then set the interval to 20
+minutes. In my mind it was going to take pictures until the 20 minutes ran out.
+When nothing happened for a minute or two, I realized my mistake.</p>
+<img src="/2016/01/02/Using-qDslrDashboard-with-the-Sony-A6000/interval-timer-setup.jpg" alt="the time lapse interval timer setup" title="the time lapse interval timer setup">
+<p>If you want to have a time lapse go for a specific amount of time, you need to
+factor in two things. The interval, which is how long to wait between shots, and
+the frame count. The frame count is exactly what it sounds like, the number of
+frames to capture. So, if I wanted to shoot for an hour and I was taking a frame
+every second, I need to work backwards to get the number of frames.</p>
+<p>If I have an interval of 5 seconds, it is going to look something like this:</p>
+<blockquote>
+<p>(60 seconds / a frame every 5 seconds) * 60 minutes = 720 frames</p>
+</blockquote>
+<p>So to capture an hour of time at 1 frame every 5 seconds, I need 720 frames
+total. This will capture an hours worth of time, I do wish qDslrDashboard had a
+way to say how long to capture as well, but it isn’t too difficult to figure out
+on my own.</p>
+<p>After that you simply press start and the camera will start taking pictures at
+the interval. Easy! So how about after you’ve taken the pictures? Well, after
+some Googling and playing around I’ve found two different ways to use the
+time lapse. One is by making a gif and the other making a movie.</p>
+<h2 id="Resizing_the_images">Resizing the images</h2><p>Since the a6000 takes 24 megapixel (roughly 6000x4000), I resize the images
+first. This is where ImageMagick comes in handy. The script below will find all
+the images and use ImageMagick’s <code>mogrify</code> command to resize the images in
+place.</p>
+<figure class="highlight bash"><figcaption><span>resize</span><a href="http://dlo.me/archives/2015/07/26/making-a-time-lapse-using-ffmpeg-and-imagemagick/" target="_blank" rel="external">I got this from this great post</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> *.jpg <span class="keyword">do</span>;</span><br><span class="line">  mogrify -resize <span class="number">3840</span>x2160^ -gravity center -crop <span class="number">3840</span>x2160+<span class="number">0</span>+<span class="number">0</span> +repage <span class="variable">$file</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong> This script resizes images in place, I do this because I export the
+pictures from Apple Photos. If you don’t want to resize the actual image, you
+can add <code>-write resized/$file</code> before the last <code>$file</code>. This will write out all
+the images to a <code>resized</code> folder.</p>
+<p>Depending on how you want the images cropped, you might want to play with the
+<code>-gravity</code> setting. This script will crop all the images directly in the center
+of the image. The <code>3840x2160^</code> resizes the image to a 4k resolution but will
+preserve the smaller of the width or height.</p>
+<p>I’ve played around with resizing images with ImageMagick before, but the credit
+for this script goes to Dan Loewenherz’s great blog post <a href="http://dlo.me/archives/2015/07/26/making-a-time-lapse-using-ffmpeg-and-imagemagick/" target="_blank" rel="external">Making a time-lapse on
+the command line using FFmpeg and
+ImageMagick</a>.
+There are many great tips from his post, so you should go read it.</p>
+<h2 id="Turning_the_images_into_a_gif">Turning the images into a gif</h2><p>If your time lapse is pretty short, you can convert to an animated gif quite
+easily using ImageMagick. The command looks something like:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">convert *.jpg -set delay <span class="number">1</span> my-time-lapse.gif</span><br></pre></td></tr></table></figure>
+<p>This is the most basic way to create an animated gif from a series of images.
+This only works if the Jpeg files are ordered. You can play around with the
+<code>-delay</code> time and see how it turns out. ImageMagick also has a million other
+things you can do so take a look at the
+<a href="http://www.imagemagick.org/script/command-line-options.php" target="_blank" rel="external">docs</a>.</p>
+<h2 id="Turning_the_images_into_a_movie">Turning the images into a movie</h2><p>Once you have the images resized how you want them, converting to a movie using
+ffmpeg is pretty simple.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -framerate &lt;some number&gt; -start_number <span class="number">1</span> -i image%<span class="number">04</span>d.jpg -c:v libx264 -pix_fmt yuv420p &lt;filename&gt;.mp4</span><br></pre></td></tr></table></figure>
+<p>This command will take the series of images and put them together into an MP4
+video file. The <code>-c:v libx264</code> command tells ffmpeg to encode the video using
+the <code>libx264</code> codec. This will encode it as an h264 video. The <code>-pix_fmt</code> option
+sets the pixel format of the video. This is the color format of the video, video
+players will use it to know how to display the video properly.</p>
+<p>And with that, you will have the final product! Ffmpeg has a ton of option and
+is a very powerful tool, I’m certain I will have more to write about using
+ffmpeg to convert or create videos.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Most of my posts are going to be something technology related but I <em>do</em> happen
+to have other interests. For a while now, I’ve had]]>
+    </summary>
+    
+      <category term="photography" scheme="http://smerrell.github.io/tags/photography/"/>
+    
+      <category term="sony-a6000" scheme="http://smerrell.github.io/tags/sony-a6000/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Learning Rust as a C# Developer]]></title>
