@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Shell Scripting and Git Fun | Sam Merrell</title>
+  <title>Keeping up with JavaScript | Sam Merrell</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This afternoon I got the urge to whip up a quick script to help me when using
-git and a GitHub hosted repository. Quite often I want to look at the GitHub
-page of a project I’m working on when I’m sit">
+  <meta name="description" content="I like JavaScript, I really do, but I just haven’t been able to keep up with the
+insane change that is going on in that world. Over the last several months at
+work I’ve been building out a project tha">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Shell Scripting and Git Fun">
-<meta property="og:url" content="http://smerrell.github.io/2012/10/26/shell-scripting-and-git-fun/index.html">
+<meta property="og:title" content="Keeping up with JavaScript">
+<meta property="og:url" content="http://smerrell.github.io/2016/02/09/Keeping-up-with-JavaScript/index.html">
 <meta property="og:site_name" content="Sam Merrell">
-<meta property="og:description" content="This afternoon I got the urge to whip up a quick script to help me when using
-git and a GitHub hosted repository. Quite often I want to look at the GitHub
-page of a project I’m working on when I’m sit">
-<meta property="og:updated_time" content="2015-12-24T00:44:26.000Z">
+<meta property="og:description" content="I like JavaScript, I really do, but I just haven’t been able to keep up with the
+insane change that is going on in that world. Over the last several months at
+work I’ve been building out a project tha">
+<meta property="og:updated_time" content="2016-02-10T04:12:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shell Scripting and Git Fun">
-<meta name="twitter:description" content="This afternoon I got the urge to whip up a quick script to help me when using
-git and a GitHub hosted repository. Quite often I want to look at the GitHub
-page of a project I’m working on when I’m sit">
+<meta name="twitter:title" content="Keeping up with JavaScript">
+<meta name="twitter:description" content="I like JavaScript, I really do, but I just haven’t been able to keep up with the
+insane change that is going on in that world. Over the last several months at
+work I’ve been building out a project tha">
 <meta name="twitter:creator" content="@smerrell">
   
     <link rel="alternative" href="/atom.xml" title="Sam Merrell" type="application/atom+xml">
@@ -82,10 +82,10 @@ ga('send', 'pageview');
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-shell-scripting-and-git-fun" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Keeping-up-with-JavaScript" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2012/10/26/shell-scripting-and-git-fun/" class="article-date">
-  <time datetime="2012-10-26T22:48:00.000Z" itemprop="datePublished">2012-10-26</time>
+    <a href="/2016/02/09/Keeping-up-with-JavaScript/" class="article-date">
+  <time datetime="2016-02-10T04:12:28.000Z" itemprop="datePublished">2016-02-09</time>
 </a>
     
   </div>
@@ -96,7 +96,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      Shell Scripting and Git Fun
+      Keeping up with JavaScript
     </h1>
   
 
@@ -104,63 +104,36 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>This afternoon I got the urge to whip up a quick script to help me when using
-git and a GitHub hosted repository. Quite often I want to look at the GitHub
-page of a project I’m working on when I’m sitting on the command line in the
-repository. So I figured, how could I go about making it easier to open that URL
-without having to find the link in Chrome or on GitHub’s site. Shell scriping to
-the rescue!</p>
-<p>I realized with a little bit of text manipulation, I could get the <code>git remote
-show</code> command to help me out. So I took the output</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ git remote show origin</span><br><span class="line">* remote origin</span><br><span class="line">  Fetch URL: git@github.com:smerrell/dotfiles.git</span><br><span class="line">  Push  URL: git@github.com:smerrell/dotfiles.git</span><br><span class="line">  HEAD branch: master</span><br><span class="line">  Remote branches:</span><br><span class="line">    gh-pages tracked</span><br><span class="line">    master   tracked</span><br><span class="line">  Local branch configured <span class="keyword">for</span> <span class="string">'git pull'</span>:</span><br><span class="line">    master merges with remote master</span><br><span class="line">  Local ref configured <span class="keyword">for</span> <span class="string">'git push'</span>:</span><br></pre></td></tr></table></figure>
-<p>And grepped it on Fetch URL leaving me with <code>Fetch URL:
-git@github.com:smerrell/dotfiles.git</code>. From there I cut the first 14 characters
-using <code>cut -c 14-</code> leaving me with just the git url I was looking for. With just
-the URL left, I got working on crafting a Sed command to manipulate the URL to
-what I needed, coming up with this:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed -r <span class="operator">-e</span> <span class="string">'s/\w+@/http:\/\//'</span> <span class="operator">-e</span> <span class="string">'s/\.git$//'</span></span><br><span class="line"><span class="operator">-e</span> <span class="string">'s/\.com:/.com\//'</span> <span class="operator">-e</span><span class="string">'s/git:/http:/'</span></span><br></pre></td></tr></table></figure>
-<p>This command just replaces the <em>git@</em> part with <em>http</em> instead, I then stripped
-off the <em>.git</em> and <em>.com:</em> with <em>.com/</em>. producing the desired
-<code>http://github.com/smerrell/dotfiles</code>. Awesome!</p>
-<p>Once I had the URL I wanted, it became pretty simple to open up the url using my
-default browser. I simply call <code>start</code> and gave it the url.</p>
-<p><strong>OSX Support</strong></p>
-<p>After getting this all working on my Windows box at work, I had to see if this
-would work on OS X. Being confident in my skills I just copied the file over to
-my Mac, dropped it in the bin and happily tried to run it… Until it blew up on
-me.</p>
-<p>First, I had to remember that on Windows you use <code>start</code> but on OS X you need to
-use <code>open</code>. That was easy enough though, I just added a quick check to see if
-I’m on OS X or Windows and set a variable <code>opencmd</code> to the right thing. But then
-the painful part hit me.</p>
-<p>This is when I learned the painful difference between Gnu-based tools and BSD
-tools. Sed was very unhappy with the parameters I was trying to pass into it.
-Specifically the -r parameter. The script above uses extended regex to get the
-special characters of <code>\w</code> and <code>+</code>. Unfortunately BSD Sed uses the <code>-E</code> flag while Gnu
-Sed uses the <code>-r</code> flag.</p>
-<p>Fortunately this is pretty easy to work around as I store the extendedRegex flag
-in my script and set it depending on the OS I’m on.</p>
-<p>The most annoying difference between Gnu Sed and BSD sed though, is the support
-of Regular Expression Metacharacters. In BSD sed, you do not get the
-metacharacters, so <code>\w</code> must become <code>[[:space:]]</code>. So now I know a painful
-difference between Gnu Sed regex extensions and BSD regex extensions. After I
-replaced the metacharacters I was using with their full version, I ran the
-script again and it worked! So I now have an easy way to open a GitHub repo from
-the command line.</p>
-<p>I still have many imrovements I could make to this script, but I’m pretty happy
-with how it turned out after putting about a half hour of work into it. Below is
-the file in its entirety and you can find it on
-<a href="https://github.com/smerrell/dotfiles/blob/master/bin/view-remote" target="_blank" rel="external">GitHub</a> as
-well. Feel free to borrow the script and use it if you find it useful. I’d love
-to get some feedback on ways to improve what I have so far.</p>
+        <p>I like JavaScript, I really do, but I just haven’t been able to keep up with the
+insane change that is going on in that world. Over the last several months at
+work I’ve been building out a project that is mostly back end work. When I have
+been able to do any sort of front end work, it has been in a desktop Windows
+application using WPF.</p>
+<p>While working on this application I started to realize I don’t have my finger on
+the pulse of the JavaScript world like I once had several years ago. Things have
+changed since Node and NPM made it incredibly easy to write JavaScript on both
+the server side and client side and to distribute that code. I’ll be honest, I
+got a little scared when I realized I just don’t know what all the latest and
+greatest changes in the world of JavaScript. What’s going to happen if people
+find out I don’t know what the next great Flux framework is? Or that I don’t
+really know what all is going on with the next version of JavaScript? Is it
+called ES7 or is it ES2016?</p>
+<p>All of that got me pretty worried until a co-worker of mine dropped this
+statement:</p>
+<blockquote class="pullquote "><p>It doesn’t matter if you step away from JavaScript for a while. As soon as you
+pick it back up, the next big thing will have come out just yesterday anyway.</p>
+</blockquote>
+<p>I still think it is silly how much things are changing and how much churn is
+happening, but I can take comfort in one thing. Everyone else will basically be
+working on the next new awesome JavaScript thing for as long as I have.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://smerrell.github.io/2012/10/26/shell-scripting-and-git-fun/" data-id="cikgbmrvb001jnq1yxwjbw2sm" class="article-share-link">Share</a>
+      <a data-url="http://smerrell.github.io/2016/02/09/Keeping-up-with-JavaScript/" data-id="cikgbmrtk0005nq1yw7c0rmha" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell-scripting/">shell-scripting</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
 
     </footer>
   </div>
@@ -168,19 +141,10 @@ to get some feedback on ways to improve what I have so far.</p>
     
 <nav id="article-nav">
   
-    <a href="/2012/11/02/automate-project-suckage-away/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Automate project suckage away
-        
-      </div>
-    </a>
   
-  
-    <a href="/2012/10/19/chocolatey-machine-setup/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/01/02/Using-qDslrDashboard-with-the-Sony-A6000/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Chocolatey machine setup</div>
+      <div class="article-nav-title">Using qDslrDashboard with the Sony a6000</div>
     </a>
   
 </nav>
