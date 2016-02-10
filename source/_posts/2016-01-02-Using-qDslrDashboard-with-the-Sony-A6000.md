@@ -173,3 +173,9 @@ players will use it to know how to display the video properly.
 And with that, you will have the final product! Ffmpeg has a ton of option and
 is a very powerful tool, I'm certain I will have more to write about using
 ffmpeg to convert or create videos.
+
+## End Result
+
+**Edit: Feburary 6, 2016:**
+
+Here is a sample video I made of a sunset. {% youtube vsy5eJAsOgc %}
