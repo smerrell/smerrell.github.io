@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://smerrell.github.io/"/>
-  <updated>2016-02-10T04:12:28.000Z</updated>
+  <updated>2016-03-17T04:07:46.000Z</updated>
   <id>http://smerrell.github.io/</id>
   
   <author>
@@ -15,11 +15,69 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Discovering Podcasts]]></title>
+    <link href="http://smerrell.github.io/2016/03/16/Discovering-Podcasts/"/>
+    <id>http://smerrell.github.io/2016/03/16/Discovering-Podcasts/</id>
+    <published>2016-03-17T04:07:24.000Z</published>
+    <updated>2016-03-17T04:07:46.000Z</updated>
+    <content type="html"><![CDATA[<p>I’ve never paid much attention to podcasts. Up until a few months ago I was
+commuting to work by train and used that time to either read books, or play
+games. All of that has been great and I’ve enjoyed the time I have had to read,
+relax, or learn something new. Recently, I’ve had to begin commuting to work
+which completely threw the routine I had developed.</p>
+<p>Since I can’t really read or play games commuting, I had to find another
+alternative. I remembered my iPhone has a Podcasting app built in so I decided
+to dive in. After a bit of Googling, I came across <a href="http://developeronfire.com/" target="_blank" rel="external">Developer on
+Fire</a> and decided to give it a spin. The very first
+episode I listened to was with <a href="http://developeronfire.com/episode-054-woody-zuill-turn-up-the-good" target="_blank" rel="external">Woody
+Zuill</a>. By
+the time I had pulled into the parking lot, I had an idea I had learned from the
+podcast I wanted to share with my team.</p>
+<p>That experience hooked me on how useful a Podcast can be. I spend so much time
+commuting each day and I don’t want to be wasting that time only driving. Since
+then I’ve been searching for a range of podcasts to listen to. Here are the
+podcasts I’m currently listening to.</p>
+<ol>
+<li><a href="https://www.dotnetrocks.com/" target="_blank" rel="external">.NET Rocks!</a></li>
+<li><a href="http://www.buzzfeed.com/anotherround" target="_blank" rel="external">Another Round</a></li>
+<li><a href="http://www.codenewbie.org/" target="_blank" rel="external">CodeNewbie</a></li>
+<li><a href="http://developeronfire.com/" target="_blank" rel="external">Developer On Fire</a></li>
+<li><a href="https://developertea.com/" target="_blank" rel="external">Developer Tea</a></li>
+<li><a href="http://www.edityourlifeshow.com/" target="_blank" rel="external">Edit Your Life</a></li>
+<li><a href="http://hanselminutes.com/" target="_blank" rel="external">Hanselminutes</a></li>
+<li><a href="http://www.newrustacean.com/" target="_blank" rel="external">New Rustacean</a></li>
+<li><a href="http://thepsychologypodcast.com/" target="_blank" rel="external">The Psychology Podcast</a></li>
+<li><a href="http://thisdeveloperslife.com/" target="_blank" rel="external">This Developers Life</a></li>
+</ol>
+<h2 id="Not_Just_Development_Podcasts">Not Just Development Podcasts</h2><p>At first, I was just listening to Developer on Fire and Developer Tea but it has
+been great to expand that list with a few podcasts on other topics I’m
+interested in. For example, The Psychology Podcast with Dr. Scott Barry Kaufman
+is a great podcast that focuses on a range of topics in psychology. Some great
+episodes have been on understanding and supporting people with ADHD and learning
+about the concept of Grit.</p>
+<p>Edit Your Life is also a great podcast about simplifying and decluttering your
+life. Hosts Asha Dornfest and Christine Koh have episodes on varying topics from
+parenting, personal finances and general relationship tips. I’ve found their
+episodes to be fun and very informative.</p>
+<p>Really branching out and listening to more than just podcasts has been a really
+great and informative time. I’ll wrap this up now, but if you have any podcasts
+you enjoy, please let me know on Twitter!</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>I’ve never paid much attention to podcasts. Up until a few months ago I was
+commuting to work by train and used that time to either read ]]>
+    </summary>
+    
+      <category term="podcasts" scheme="http://smerrell.github.io/tags/podcasts/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Keeping up with JavaScript]]></title>
     <link href="http://smerrell.github.io/2016/02/09/Keeping-up-with-JavaScript/"/>
     <id>http://smerrell.github.io/2016/02/09/Keeping-up-with-JavaScript/</id>
     <published>2016-02-10T04:12:28.000Z</published>
-    <updated>2016-02-10T04:12:28.000Z</updated>
+    <updated>2016-03-15T03:40:50.000Z</updated>
     <content type="html"><![CDATA[<p>I like JavaScript, I really do, but I just haven’t been able to keep up with the
 insane change that is going on in that world. Over the last several months at
 work I’ve been building out a project that is mostly back end work. When I have
@@ -57,7 +115,7 @@ insane change that is going on in that world. Over the l]]>
     <link href="http://smerrell.github.io/2016/01/02/Using-qDslrDashboard-with-the-Sony-A6000/"/>
     <id>http://smerrell.github.io/2016/01/02/Using-qDslrDashboard-with-the-Sony-A6000/</id>
     <published>2016-01-02T19:11:15.000Z</published>
-    <updated>2016-02-10T04:17:50.000Z</updated>
+    <updated>2016-03-15T03:40:50.000Z</updated>
     <content type="html"><![CDATA[<p>Most of my posts are going to be something technology related but I <em>do</em> happen
 to have other interests. For a while now, I’ve had a Sony a6000 that I’ve been
 very happy with. I’m very much an amateur at photography but I find it fun and I
