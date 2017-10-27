@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rust on Sam Merrell</title>
+    <link>https://smerrell.github.io/tags/rust/</link>
+    <description>Recent content in Rust on Sam Merrell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Dec 2015 17:47:29 +0000</lastBuildDate>
+    
+	<atom:link href="https://smerrell.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learning Rust as a C# Developer</title>
+      <link>https://smerrell.github.io/posts/2015/12/learning-rust-as-a-csharp-developer/</link>
+      <pubDate>Wed, 23 Dec 2015 17:47:29 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2015/12/learning-rust-as-a-csharp-developer/</guid>
+      <description>Choosing a new programming language to learn is difficult. What do I want to focus on? Do I want to learn something low level like C? Do I want to go all out functional and learn Haskell? What about Go? Everyone seems to be glowing about that language. Elixir? I hear Rubyists are really digging on that language, and it is built on top of Erlang! So many choices!</description>
+    </item>
+    
+  </channel>
+</rss>

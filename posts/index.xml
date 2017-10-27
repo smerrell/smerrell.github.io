@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Sam Merrell</title>
+    <link>https://smerrell.github.io/posts/</link>
+    <description>Recent content in Posts on Sam Merrell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Mar 2016 22:07:24 +0000</lastBuildDate>
+    
+	<atom:link href="https://smerrell.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Discovering Podcasts</title>
+      <link>https://smerrell.github.io/posts/2016/03/discovering-podcasts/</link>
+      <pubDate>Wed, 16 Mar 2016 22:07:24 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2016/03/discovering-podcasts/</guid>
+      <description>I&amp;rsquo;ve never paid much attention to podcasts. Up until a few months ago I was commuting to work by train and used that time to either read books, or play games. All of that has been great and I&amp;rsquo;ve enjoyed the time I have had to read, relax, or learn something new. Recently, I&amp;rsquo;ve had to begin commuting to work which completely threw the routine I had developed.
+Since I can&amp;rsquo;t really read or play games commuting, I had to find another alternative.</description>
+    </item>
+    
+    <item>
+      <title>Keeping up with JavaScript</title>
+      <link>https://smerrell.github.io/posts/2016/02/keeping-up-with-javascript/</link>
+      <pubDate>Tue, 09 Feb 2016 21:12:28 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2016/02/keeping-up-with-javascript/</guid>
+      <description>I like JavaScript, I really do, but I just haven&amp;rsquo;t been able to keep up with the insane change that is going on in that world. Over the last several months at work I&amp;rsquo;ve been building out a project that is mostly back end work. When I have been able to do any sort of front end work, it has been in a desktop Windows application using WPF.
+While working on this application I started to realize I don&amp;rsquo;t have my finger on the pulse of the JavaScript world like I once had several years ago.</description>
+    </item>
+    
+    <item>
+      <title>Using qDslrDashboard with the Sony a6000</title>
+      <link>https://smerrell.github.io/posts/2016/01/using-qdslrdashboard-with-the-sony-a6000/</link>
+      <pubDate>Sat, 02 Jan 2016 12:11:15 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2016/01/using-qdslrdashboard-with-the-sony-a6000/</guid>
+      <description>Most of my posts are going to be something technology related but I do happen to have other interests. For a while now, I&amp;rsquo;ve had a Sony a6000 that I&amp;rsquo;ve been very happy with. I&amp;rsquo;m very much an amateur at photography but I find it fun and I like the images I get of my family more than the ones I can get from my iPhone. So I&amp;rsquo;ve been slowly trying to level up my photography skills.</description>
+    </item>
+    
+    <item>
+      <title>Learning Rust as a C# Developer</title>
+      <link>https://smerrell.github.io/posts/2015/12/learning-rust-as-a-csharp-developer/</link>
+      <pubDate>Wed, 23 Dec 2015 17:47:29 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2015/12/learning-rust-as-a-csharp-developer/</guid>
+      <description>Choosing a new programming language to learn is difficult. What do I want to focus on? Do I want to learn something low level like C? Do I want to go all out functional and learn Haskell? What about Go? Everyone seems to be glowing about that language. Elixir? I hear Rubyists are really digging on that language, and it is built on top of Erlang! So many choices!</description>
+    </item>
+    
+    <item>
+      <title>Agile is Hard</title>
+      <link>https://smerrell.github.io/posts/2012/12/agile-is-hard/</link>
+      <pubDate>Fri, 14 Dec 2012 16:00:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/12/agile-is-hard/</guid>
+      <description>Agile. Such a broad topic with so much to discuss and so much already discussed. It really is one of those topics you can go on about forever. So how am I going to put my spin on things? Well, I&amp;rsquo;m not I&amp;rsquo;m just going to talk about what I&amp;rsquo;ve learned so far in over a year of really trying to do agile the right way and hopefully I&amp;rsquo;ll have learned something as well as you, the reader.</description>
+    </item>
+    
+    <item>
+      <title>Make Testing Easy</title>
+      <link>https://smerrell.github.io/posts/2012/12/make-testing-easy/</link>
+      <pubDate>Thu, 06 Dec 2012 23:26:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/12/make-testing-easy/</guid>
+      <description>Testing. We all know that we should do it, and yet often times we find ourselves struggling to stay consistent in testing our code. I know that I personally find it difficult sometimes to really stick to and test my code, and guess what happens when you don&amp;rsquo;t test your code. It comes back to haunt you.
+I was discussing this with my coworker Ryan about this very problem, and it got me thinking I should write it down.</description>
+    </item>
+    
+    <item>
+      <title>Looking Back: Development Retrospective</title>
+      <link>https://smerrell.github.io/posts/2012/12/looking-back-development-retrospective/</link>
+      <pubDate>Sat, 01 Dec 2012 15:08:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/12/looking-back-development-retrospective/</guid>
+      <description>I&amp;rsquo;m in a bit of a retrospective mood so this post is going to be focusing on the things I&amp;rsquo;ve learned so far in software development. And no, mostly not specific code things I&amp;rsquo;ve learned. There will be other posts for that.
+I&amp;rsquo;ve been out of school and in the world of software development for five years now. Over this time I&amp;rsquo;ve had the opportunity to have many great, and many not so great experiences that I&amp;rsquo;d like to reflect on and share.</description>
+    </item>
+    
+    <item>
+      <title>Giving Sublime Text 2 A Try</title>
+      <link>https://smerrell.github.io/posts/2012/11/giving-sublime-text-2-a-try/</link>
+      <pubDate>Sun, 18 Nov 2012 20:10:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/11/giving-sublime-text-2-a-try/</guid>
+      <description>Looks like Rob Conery got back in the blogging mood and picked a rather interesting subject. His topic? The holy war prone land of text editors Though I will say, his title for the post Code Editor Thunderdome. is awesome. Acutally, the blog itself is really a pretty good read with lots of good information for several editors that are worth checking out.
+So why exactly am I writing a post about Sublime Text 2?</description>
+    </item>
+    
+    <item>
+      <title>Open Source Changing How We Work</title>
+      <link>https://smerrell.github.io/posts/2012/11/open-source-changing-work/</link>
+      <pubDate>Fri, 16 Nov 2012 00:30:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/11/open-source-changing-work/</guid>
+      <description>I may have a bit of an obsession with GitHub right now, and no not GitHub the product, I mean GitHub the company. I&amp;rsquo;ve posted about how I&amp;rsquo;ve been inspired by GitHub&amp;rsquo;s automation and even got my coworkers to watch Zach Holman&amp;rsquo;s video on GitHub&amp;rsquo;s automation. And just this week we all sat down and watched Ryan Tomayko&amp;rsquo;s video on how GitHub does management (hint: it&amp;rsquo;s not like many other companies).</description>
+    </item>
+    
+    <item>
+      <title>Windows to OS X: BetterTouchTool</title>
+      <link>https://smerrell.github.io/posts/2012/11/windows-to-os-x-better-touch-tool/</link>
+      <pubDate>Sat, 10 Nov 2012 12:13:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/11/windows-to-os-x-better-touch-tool/</guid>
+      <description>Not too long ago I finally got myself a new laptop, and this time I decided to get the 15&amp;rdquo; MacBook Pro Retina. I&amp;rsquo;ve been using Windows 7 primarily the last couple years since my work laptop has been the only machine I have had. Previous to that I had been using Linux (Ubuntu specifically) for a couple years.
+While I have nothing really against Windows, it really isn&amp;rsquo;t my preferred operating system for anything other than games (and even that is changing with Valve supporting OS X and Linux now).</description>
+    </item>
+    
+    <item>
+      <title>Automate project suckage away</title>
+      <link>https://smerrell.github.io/posts/2012/11/automate-project-suckage-away/</link>
+      <pubDate>Fri, 02 Nov 2012 16:23:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/11/automate-project-suckage-away/</guid>
+      <description>How much tedious work is involved in setting up and developing individual projects at your work? In my first post I wrote about how much tedious work is involved in setting up a new machine, now let&amp;rsquo;s dig a little deeper to the project level.
+Automation at the project level is very much in line with Zach Holman&amp;rsquo;s talk on automating machine setup. In his talk he mentions that each project has it&amp;rsquo;s own setup scripts to get things up and running quickly.</description>
+    </item>
+    
+    <item>
+      <title>Shell Scripting and Git Fun</title>
+      <link>https://smerrell.github.io/posts/2012/10/shell-scripting-and-git-fun/</link>
+      <pubDate>Fri, 26 Oct 2012 16:48:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/10/shell-scripting-and-git-fun/</guid>
+      <description>This afternoon I got the urge to whip up a quick script to help me when using git and a GitHub hosted repository. Quite often I want to look at the GitHub page of a project I&amp;rsquo;m working on when I&amp;rsquo;m sitting on the command line in the repository. So I figured, how could I go about making it easier to open that URL without having to find the link in Chrome or on GitHub&amp;rsquo;s site.</description>
+    </item>
+    
+    <item>
+      <title>Chocolatey machine setup</title>
+      <link>https://smerrell.github.io/posts/2012/10/chocolatey-machine-setup/</link>
+      <pubDate>Fri, 19 Oct 2012 22:42:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/10/chocolatey-machine-setup/</guid>
+      <description>How well automated is your machine setup process? After watching Zach Holman&amp;rsquo;s excellent video Unsucking Your Teams Development Environment I got to thinking about the setup process we have at Extend Health (who is hiring, come work with us!). While we&amp;rsquo;ve always talked about smoothing out the process of setting up a new machine, we&amp;rsquo;ve never actually gotten around to it. That is, until now.
+For GitHub, they use what they call The Setup which is a Ruby script that uses Puppet to manage all their machines.</description>
+    </item>
+    
+  </channel>
+</rss>

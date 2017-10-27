@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scrum on Sam Merrell</title>
+    <link>https://smerrell.github.io/tags/scrum/</link>
+    <description>Recent content in Scrum on Sam Merrell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Dec 2012 16:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://smerrell.github.io/tags/scrum/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Agile is Hard</title>
+      <link>https://smerrell.github.io/posts/2012/12/agile-is-hard/</link>
+      <pubDate>Fri, 14 Dec 2012 16:00:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/12/agile-is-hard/</guid>
+      <description>Agile. Such a broad topic with so much to discuss and so much already discussed. It really is one of those topics you can go on about forever. So how am I going to put my spin on things? Well, I&amp;rsquo;m not I&amp;rsquo;m just going to talk about what I&amp;rsquo;ve learned so far in over a year of really trying to do agile the right way and hopefully I&amp;rsquo;ll have learned something as well as you, the reader.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Editors on Sam Merrell</title>
+    <link>https://smerrell.github.io/tags/editors/</link>
+    <description>Recent content in Editors on Sam Merrell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Nov 2012 20:10:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://smerrell.github.io/tags/editors/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Giving Sublime Text 2 A Try</title>
+      <link>https://smerrell.github.io/posts/2012/11/giving-sublime-text-2-a-try/</link>
+      <pubDate>Sun, 18 Nov 2012 20:10:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/11/giving-sublime-text-2-a-try/</guid>
+      <description>Looks like Rob Conery got back in the blogging mood and picked a rather interesting subject. His topic? The holy war prone land of text editors Though I will say, his title for the post Code Editor Thunderdome. is awesome. Acutally, the blog itself is really a pretty good read with lots of good information for several editors that are worth checking out.
+So why exactly am I writing a post about Sublime Text 2?</description>
+    </item>
+    
+  </channel>
+</rss>

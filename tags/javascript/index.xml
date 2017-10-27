@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on Sam Merrell</title>
+    <link>https://smerrell.github.io/tags/javascript/</link>
+    <description>Recent content in Javascript on Sam Merrell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Feb 2016 21:12:28 +0000</lastBuildDate>
+    
+	<atom:link href="https://smerrell.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Keeping up with JavaScript</title>
+      <link>https://smerrell.github.io/posts/2016/02/keeping-up-with-javascript/</link>
+      <pubDate>Tue, 09 Feb 2016 21:12:28 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2016/02/keeping-up-with-javascript/</guid>
+      <description>I like JavaScript, I really do, but I just haven&amp;rsquo;t been able to keep up with the insane change that is going on in that world. Over the last several months at work I&amp;rsquo;ve been building out a project that is mostly back end work. When I have been able to do any sort of front end work, it has been in a desktop Windows application using WPF.
+While working on this application I started to realize I don&amp;rsquo;t have my finger on the pulse of the JavaScript world like I once had several years ago.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell Scripting on Sam Merrell</title>
+    <link>https://smerrell.github.io/tags/shell-scripting/</link>
+    <description>Recent content in Shell Scripting on Sam Merrell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Oct 2012 16:48:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://smerrell.github.io/tags/shell-scripting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shell Scripting and Git Fun</title>
+      <link>https://smerrell.github.io/posts/2012/10/shell-scripting-and-git-fun/</link>
+      <pubDate>Fri, 26 Oct 2012 16:48:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/10/shell-scripting-and-git-fun/</guid>
+      <description>This afternoon I got the urge to whip up a quick script to help me when using git and a GitHub hosted repository. Quite often I want to look at the GitHub page of a project I&amp;rsquo;m working on when I&amp;rsquo;m sitting on the command line in the repository. So I figured, how could I go about making it easier to open that URL without having to find the link in Chrome or on GitHub&amp;rsquo;s site.</description>
+    </item>
+    
+  </channel>
+</rss>

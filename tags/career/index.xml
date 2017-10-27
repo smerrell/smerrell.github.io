@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Career on Sam Merrell</title>
+    <link>https://smerrell.github.io/tags/career/</link>
+    <description>Recent content in Career on Sam Merrell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Dec 2012 15:08:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://smerrell.github.io/tags/career/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Looking Back: Development Retrospective</title>
+      <link>https://smerrell.github.io/posts/2012/12/looking-back-development-retrospective/</link>
+      <pubDate>Sat, 01 Dec 2012 15:08:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/12/looking-back-development-retrospective/</guid>
+      <description>I&amp;rsquo;m in a bit of a retrospective mood so this post is going to be focusing on the things I&amp;rsquo;ve learned so far in software development. And no, mostly not specific code things I&amp;rsquo;ve learned. There will be other posts for that.
+I&amp;rsquo;ve been out of school and in the world of software development for five years now. Over this time I&amp;rsquo;ve had the opportunity to have many great, and many not so great experiences that I&amp;rsquo;d like to reflect on and share.</description>
+    </item>
+    
+  </channel>
+</rss>

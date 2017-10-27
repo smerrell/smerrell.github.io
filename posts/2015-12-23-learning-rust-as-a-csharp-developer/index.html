@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Merrell">
+<meta name="description" content="Personal Blog">
+<meta name="generator" content="Hugo 0.30.2" />
+<title>Learning Rust as a C# Developer</title>
+<link rel="shortcut icon" href="https://smerrell.github.io/images/favicon.ico">
+<link rel="stylesheet" href="https://smerrell.github.io/css/style.css">
+
+
+
+<link rel="stylesheet" href="https://smerrell.github.io/css/monosocialiconsfont.css">
+
+
+
+<link href="https://smerrell.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Sam Merrell" />
+
+
+<meta property="og:title" content="Learning Rust as a C# Developer" />
+<meta property="og:description" content="Choosing a new programming language to learn is difficult. What do I want to focus on? Do I want to learn something low level like C? Do I want to go all out functional and learn Haskell? What about Go? Everyone seems to be glowing about that language. Elixir? I hear Rubyists are really digging on that language, and it is built on top of Erlang! So many choices!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://smerrell.github.io/posts/2015-12-23-learning-rust-as-a-csharp-developer/" />
+
+
+
+<meta property="article:published_time" content="2015-12-23T17:47:29&#43;00:00"/>
+
+<meta property="article:modified_time" content="2015-12-23T17:47:29&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Learning Rust as a C# Developer">
+<meta itemprop="description" content="Choosing a new programming language to learn is difficult. What do I want to focus on? Do I want to learn something low level like C? Do I want to go all out functional and learn Haskell? What about Go? Everyone seems to be glowing about that language. Elixir? I hear Rubyists are really digging on that language, and it is built on top of Erlang! So many choices!">
+
+
+<meta itemprop="datePublished" content="2015-12-23T17:47:29&#43;00:00" />
+<meta itemprop="dateModified" content="2015-12-23T17:47:29&#43;00:00" />
+<meta itemprop="wordCount" content="619">
+
+
+
+<meta itemprop="keywords" content="rust,csharp," />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Learning Rust as a C# Developer"/>
+<meta name="twitter:description" content="Choosing a new programming language to learn is difficult. What do I want to focus on? Do I want to learn something low level like C? Do I want to go all out functional and learn Haskell? What about Go? Everyone seems to be glowing about that language. Elixir? I hear Rubyists are really digging on that language, and it is built on top of Erlang! So many choices!"/>
+<meta name="twitter:site" content="@https://www.twitter.com/smerrell"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='https://smerrell.github.io/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+ 		<a href='/about/'>About</a>
+  	
+
+	
+		<a class="cta" href="https://smerrell.github.io/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Learning Rust as a C# Developer</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        December 23, 2015
+        <br>
+        
+        
+            
+                <a href="https://smerrell.github.io/tags/rust">rust</a>
+            
+                <a href="https://smerrell.github.io/tags/csharp">csharp</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<p>Choosing a new programming language to learn is difficult. What do I want to
+focus on? Do I want to learn something low level like C? Do I want to go all out
+functional and learn Haskell? What about Go? Everyone seems to be glowing about
+that language. Elixir? I hear Rubyists are really digging on that language, and
+it is built on top of Erlang! So many choices!</p>
+
+<p>As you&rsquo;ve probably guessed from the title, I ended up picking the <a href="https://rust-lang.org">Rust
+programming language</a> as the language I&rsquo;d like to focus
+on and learn about. So lets take a little bit of time to talk about why I made
+that choice.</p>
+
+<h2 id="a-way-to-delve-into-systems-programming">A way to delve into &ldquo;systems programming&rdquo;</h2>
+
+<p>&ldquo;Systems programming&rdquo; feels like this mythical place of expert developers
+writing bare metal code to do things I can barely even understad. It is so
+different from my day-to-day job that it feels almost unattainable. I&rsquo;ve never
+written anything in assembly, I can&rsquo;t really read hex, and I&rsquo;ve only barely
+tried to write anything in C. It really feels like such a daunting task to get
+into what seems like such a complicated topic.</p>
+
+<p>Fortunatly, Rust really feels like an accessible language that could get me
+learning about systems programming. I can learn how to manage my own memory, how
+to write performant code, how to work safely with pointers and many other &ldquo;low
+level&rdquo; bits of code. For whatever reason, Rust just feels like I can jump in and
+actually do something. I haven&rsquo;t felt that way with C or C++.</p>
+
+<h2 id="a-c-replacement">A C replacement</h2>
+
+<p>I swear, one day I actually am going to get around to learning C. When I do I&rsquo;m
+going to do it <a href="http://c.learncodethehardway.org/book/">the hard way</a>. But until
+I do, one of the reasons I picked Rust is that it is explicitly aimed at
+replacing C and C++ as the programming language of choice for prople writing
+performance critical or low level code. I&rsquo;ve started and quickly stopped
+learning C and I haven&rsquo;t found the motivation yet to stick with it and really
+learn the language. I&rsquo;m sure I will eventually, but I think the barrier to entry
+has still been too high for me.</p>
+
+<p>With Rust, I have been able to get going pretty quickly in the language and
+start to learn bits and pieces about Rust while doing interesting things. I&rsquo;m
+sure I could also do this with C, but so far I just haven&rsquo;t had the willpower to
+stick with it. Rust, on the other hand, has kept me very interested and very
+motivated to learn the language.</p>
+
+<h2 id="no-gc">No GC</h2>
+
+<p>Another specific reason I chose Rust was that I wanted to try out a language
+that does no garbage collection for me. Throughout my career as a developer I&rsquo;ve
+worked in a garbage collected language, and honestly it is pretty awesome most
+of the time. But, since it is the only thing I&rsquo;ve used before and I want to
+learn lower level programming skills, I have to learn how to walk away from
+garbage collection and learn how to manage memory myself.</p>
+
+<h2 id="modern-language-features">Modern language features</h2>
+
+<p>As a final deciding factor, the language features that Rust provides are very
+compelling to me. Generics are available and I am familiar with how to use them
+in C#, Traits (i.e. Interfaces for C# people), pattern matching, etc. are all
+language features that feel very compelling and interesting to use.</p>
+
+<p>So there you have it, a few of the reasons that I&rsquo;ve decided to spend time
+really trying to dig in and learn the Rust programming language. I have much to
+learn and will likely be sporadically sharing what I&rsquo;ve come across so far here
+on this blog.</p>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/smerrell">
+    <img alt="Image of Sam Merrell" class="avatar avatar--small" src="https://smerrell.github.io/images/avatar.jpg">
+    <div>
+        <span class="dark">Sam Merrell</span>
+        <span>I like to learn new things.</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsmerrell.github.io%2fposts%2f2015-12-23-learning-rust-as-a-csharp-developer%2f - Learning%20Rust%20as%20a%20C%23%20Developer by @smerrell">
+  <span class="icon-twitter"> Tweet</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/2016-03-16-discovering-podcasts/">Discovering Podcasts<aside class="dates">Mar 16 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016-02-09-keeping-up-with-javascript/">Keeping up with JavaScript<aside class="dates">Feb 9 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016-01-02-using-qdslrdashboard-with-the-sony-a6000/">Using qDslrDashboard with the Sony a6000<aside class="dates">Jan 2 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012-12-14-agile-is-hard/">Agile is Hard<aside class="dates">Dec 14 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012-12-06-make-testing-easy/">Make Testing Easy<aside class="dates">Dec 6 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012-12-01-looking-back-development-retrospective/">Looking Back: Development Retrospective<aside class="dates">Dec 1 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012-11-18-giving-sublime-text-2-a-try/">Giving Sublime Text 2 A Try<aside class="dates">Nov 18 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012-11-16-open-source-changing-work/">Open Source Changing How We Work<aside class="dates">Nov 16 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012-11-10-windows-to-os-x-better-touch-tool/">Windows to OS X: BetterTouchTool<aside class="dates">Nov 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012-11-02-automate-project-suckage-away/">Automate project suckage away<aside class="dates">Nov 2 2012</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/smerrell">
+        roundedgithub
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/smerrell">
+        roundedtwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2017 Sam Merrell
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script async src="https://smerrell.github.io/js/main.js"></script>
+
+
+
+
+
+</body>
+</html>

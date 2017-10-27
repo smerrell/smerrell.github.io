@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Testing on Sam Merrell</title>
+    <link>https://smerrell.github.io/tags/testing/</link>
+    <description>Recent content in Testing on Sam Merrell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Dec 2012 23:26:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://smerrell.github.io/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Make Testing Easy</title>
+      <link>https://smerrell.github.io/posts/2012/12/make-testing-easy/</link>
+      <pubDate>Thu, 06 Dec 2012 23:26:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/12/make-testing-easy/</guid>
+      <description>Testing. We all know that we should do it, and yet often times we find ourselves struggling to stay consistent in testing our code. I know that I personally find it difficult sometimes to really stick to and test my code, and guess what happens when you don&amp;rsquo;t test your code. It comes back to haunt you.
+I was discussing this with my coworker Ryan about this very problem, and it got me thinking I should write it down.</description>
+    </item>
+    
+  </channel>
+</rss>

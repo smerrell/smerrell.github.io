@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on Sam Merrell</title>
+    <link>https://smerrell.github.io/tags/tools/</link>
+    <description>Recent content in Tools on Sam Merrell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Nov 2012 12:13:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://smerrell.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Windows to OS X: BetterTouchTool</title>
+      <link>https://smerrell.github.io/posts/2012/11/windows-to-os-x-better-touch-tool/</link>
+      <pubDate>Sat, 10 Nov 2012 12:13:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/11/windows-to-os-x-better-touch-tool/</guid>
+      <description>Not too long ago I finally got myself a new laptop, and this time I decided to get the 15&amp;rdquo; MacBook Pro Retina. I&amp;rsquo;ve been using Windows 7 primarily the last couple years since my work laptop has been the only machine I have had. Previous to that I had been using Linux (Ubuntu specifically) for a couple years.
+While I have nothing really against Windows, it really isn&amp;rsquo;t my preferred operating system for anything other than games (and even that is changing with Valve supporting OS X and Linux now).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Random on Sam Merrell</title>
+    <link>https://smerrell.github.io/tags/random/</link>
+    <description>Recent content in Random on Sam Merrell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Nov 2012 00:30:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://smerrell.github.io/tags/random/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Open Source Changing How We Work</title>
+      <link>https://smerrell.github.io/posts/2012/11/open-source-changing-work/</link>
+      <pubDate>Fri, 16 Nov 2012 00:30:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/11/open-source-changing-work/</guid>
+      <description>I may have a bit of an obsession with GitHub right now, and no not GitHub the product, I mean GitHub the company. I&amp;rsquo;ve posted about how I&amp;rsquo;ve been inspired by GitHub&amp;rsquo;s automation and even got my coworkers to watch Zach Holman&amp;rsquo;s video on GitHub&amp;rsquo;s automation. And just this week we all sat down and watched Ryan Tomayko&amp;rsquo;s video on how GitHub does management (hint: it&amp;rsquo;s not like many other companies).</description>
+    </item>
+    
+  </channel>
+</rss>

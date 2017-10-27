@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Podcasts on Sam Merrell</title>
+    <link>https://smerrell.github.io/tags/podcasts/</link>
+    <description>Recent content in Podcasts on Sam Merrell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Mar 2016 22:07:24 +0000</lastBuildDate>
+    
+	<atom:link href="https://smerrell.github.io/tags/podcasts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Discovering Podcasts</title>
+      <link>https://smerrell.github.io/posts/2016/03/discovering-podcasts/</link>
+      <pubDate>Wed, 16 Mar 2016 22:07:24 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2016/03/discovering-podcasts/</guid>
+      <description>I&amp;rsquo;ve never paid much attention to podcasts. Up until a few months ago I was commuting to work by train and used that time to either read books, or play games. All of that has been great and I&amp;rsquo;ve enjoyed the time I have had to read, relax, or learn something new. Recently, I&amp;rsquo;ve had to begin commuting to work which completely threw the routine I had developed.
+Since I can&amp;rsquo;t really read or play games commuting, I had to find another alternative.</description>
+    </item>
+    
+  </channel>
+</rss>

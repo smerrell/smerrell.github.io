@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Automation on Sam Merrell</title>
+    <link>https://smerrell.github.io/tags/automation/</link>
+    <description>Recent content in Automation on Sam Merrell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Nov 2012 16:23:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://smerrell.github.io/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Automate project suckage away</title>
+      <link>https://smerrell.github.io/posts/2012/11/automate-project-suckage-away/</link>
+      <pubDate>Fri, 02 Nov 2012 16:23:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/11/automate-project-suckage-away/</guid>
+      <description>How much tedious work is involved in setting up and developing individual projects at your work? In my first post I wrote about how much tedious work is involved in setting up a new machine, now let&amp;rsquo;s dig a little deeper to the project level.
+Automation at the project level is very much in line with Zach Holman&amp;rsquo;s talk on automating machine setup. In his talk he mentions that each project has it&amp;rsquo;s own setup scripts to get things up and running quickly.</description>
+    </item>
+    
+    <item>
+      <title>Chocolatey machine setup</title>
+      <link>https://smerrell.github.io/posts/2012/10/chocolatey-machine-setup/</link>
+      <pubDate>Fri, 19 Oct 2012 22:42:00 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2012/10/chocolatey-machine-setup/</guid>
+      <description>How well automated is your machine setup process? After watching Zach Holman&amp;rsquo;s excellent video Unsucking Your Teams Development Environment I got to thinking about the setup process we have at Extend Health (who is hiring, come work with us!). While we&amp;rsquo;ve always talked about smoothing out the process of setting up a new machine, we&amp;rsquo;ve never actually gotten around to it. That is, until now.
+For GitHub, they use what they call The Setup which is a Ruby script that uses Puppet to manage all their machines.</description>
+    </item>
+    
+  </channel>
+</rss>
