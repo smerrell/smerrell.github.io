@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quartz on Sam Merrell</title>
+    <link>https://smerrell.github.io/tags/quartz/</link>
+    <description>Recent content in Quartz on Sam Merrell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Oct 2017 22:02:39 +0000</lastBuildDate>
+    
+	<atom:link href="https://smerrell.github.io/tags/quartz/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Swift 4 Drawing</title>
+      <link>https://smerrell.github.io/posts/2017/10/swift-4-drawing/</link>
+      <pubDate>Sat, 14 Oct 2017 22:02:39 +0000</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2017/10/swift-4-drawing/</guid>
+      <description>Learning how to use Swift 4 and Quartz / Core Graphics. Much of the information found online only go to Swift 3, but Swift 4 APIs have changed to be more Swift-like. This is good, but makes it hard to find documentation online that works.
+What is Quartz 2D / Core Graphics Making Your Own View  You need to subclass NSView  1class CircleView: NSView { 2 override func draw(_ dirtyRect: NSRect) { 3 4 } 5} Adding your custom view to the storyboard  Use Custom View On the Identity Inspector tab, make sure to set the Class, to your view&amp;rsquo;s class.</description>
+    </item>
+    
+  </channel>
+</rss>

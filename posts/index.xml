@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Sam Merrell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Mar 2016 22:07:24 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Nov 2017 16:32:53 -0600</lastBuildDate>
     
 	<atom:link href="https://smerrell.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Getting to Know Swift</title>
+      <link>https://smerrell.github.io/posts/2017/11/getting-to-know-swift/</link>
+      <pubDate>Sat, 04 Nov 2017 16:32:53 -0600</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2017/11/getting-to-know-swift/</guid>
+      <description>For the last several years I&amp;rsquo;ve primarily been a backend developer using C# and occasionally doing work on the frontend with JavaScript. I&amp;rsquo;ve dabbled in learning Rust as well but I wanted to try my hand at writing native iOS and macOS applications for a change.
+After doing some research on where to begin, I started reading the book App Development with Swift by Apple. This book has been a great guide for learning Swift through developing iOS applications.</description>
+    </item>
     
     <item>
       <title>Discovering Podcasts</title>

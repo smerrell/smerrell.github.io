@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Merrell">
+<meta name="description" content="Personal Blog">
+<meta name="generator" content="Hugo 0.30.2" />
+<title>Swift 4 Drawing</title>
+<link rel="shortcut icon" href="https://smerrell.github.io/images/favicon.ico">
+<link rel="stylesheet" href="https://smerrell.github.io/css/style.css">
+
+
+
+<link rel="stylesheet" href="https://smerrell.github.io/css/monosocialiconsfont.css">
+
+
+
+<link href="https://smerrell.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Sam Merrell" />
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-35739428-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-35739428-1');
+</script>
+
+<meta property="og:title" content="Swift 4 Drawing" />
+<meta property="og:description" content="Learning the Quartz / Core Graphics API" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://smerrell.github.io/posts/2017/10/swift-4-drawing/" />
+
+
+
+<meta property="article:published_time" content="2017-10-14T22:02:39&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-10-14T22:02:39&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Swift 4 Drawing">
+<meta itemprop="description" content="Learning the Quartz / Core Graphics API">
+
+
+<meta itemprop="datePublished" content="2017-10-14T22:02:39&#43;00:00" />
+<meta itemprop="dateModified" content="2017-10-14T22:02:39&#43;00:00" />
+<meta itemprop="wordCount" content="345">
+
+
+
+<meta itemprop="keywords" content="Swift,Quartz," />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Swift 4 Drawing"/>
+<meta name="twitter:description" content="Learning the Quartz / Core Graphics API"/>
+<meta name="twitter:site" content="@https://www.twitter.com/smerrell"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='https://smerrell.github.io/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+ 		<a href='/about/'>About</a>
+  	
+
+	
+		<a class="cta" href="https://smerrell.github.io/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Swift 4 Drawing</h1>
+        <h2 class="subtitle">Learning the Quartz / Core Graphics API</h2>
+        <h2 class="headline">
+        October 14, 2017
+        <br>
+        
+        
+            
+                <a href="https://smerrell.github.io/tags/swift">Swift</a>
+            
+                <a href="https://smerrell.github.io/tags/quartz">Quartz</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<p>Learning how to use Swift 4 and Quartz / Core Graphics. Much of the information
+found online only go to Swift 3, but Swift 4 APIs have changed to be more
+Swift-like. This is good, but makes it hard to find documentation online that
+works.</p>
+
+<h2 id="what-is-quartz-2d-core-graphics">What is Quartz 2D / Core Graphics</h2>
+
+<h2 id="making-your-own-view">Making Your Own View</h2>
+
+<ol>
+<li>You need to subclass <code>NSView</code></li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kd">class</span> <span class="nc">CircleView</span><span class="p">:</span> <span class="n">NSView</span> <span class="p">{</span>
+<span class="ln">2</span>    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">draw</span><span class="p">(</span><span class="kc">_</span> <span class="n">dirtyRect</span><span class="p">:</span> <span class="n">NSRect</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">3</span>
+<span class="ln">4</span>    <span class="p">}</span>
+<span class="ln">5</span><span class="p">}</span></code></pre></div>
+<h2 id="adding-your-custom-view-to-the-storyboard">Adding your custom view to the storyboard</h2>
+
+<ol>
+<li>Use <code>Custom View</code></li>
+<li>On the <code>Identity Inspector</code> tab, make sure to set the Class, to your view&rsquo;s
+class.</li>
+<li>You can make your view show up in interface builder by prefixing the class
+with <code>@IBDesignable</code></li>
+</ol>
+
+<h2 id="questions">Questions</h2>
+
+<h3 id="how-does-the-graphics-context-play-in-this">How does the Graphics context play in this?</h3>
+
+<h4 id="the-right-way-now">The right way now</h4>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kd">let</span> <span class="nv">context</span> <span class="p">=</span> <span class="n">NSGraphicsContext</span><span class="p">.</span><span class="n">current</span><span class="p">?.</span><span class="n">cgContext</span></code></pre></div>
+<h4 id="the-old-way-looks-like-this">The old way looks like this:</h4>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kd">let</span> <span class="nv">context</span> <span class="p">=</span> <span class="n">NSGraphicsContext</span><span class="p">.</span><span class="n">current</span><span class="p">?.</span><span class="n">graphicsPort</span></code></pre></div>
+<p>That method is deprecated.</p>
+
+<h3 id="filling-cgrect-s">Filling <code>CGRect</code>s</h3>
+
+<p>There look to be two ways to fill a <code>CGRect</code>. Either you can call <code>.fill()</code> on
+an instance of a <code>CGRect</code> or you can call the <code>.fill(rect: CGRect)</code> or
+<code>.fill(rects: [CGRect])</code>. Is one preferred over the other? I could see how the
+fill multiple rects would be useful but how does the single fill compare to the
+one on the <code>CGRect</code> itself?</p>
+
+<h2 id="notes">Notes</h2>
+
+<h3 id="nsrect-vs-cgrect"><code>NSRect</code> vs <code>CGRect</code></h3>
+
+<p>They look like they are the same thing. I&rsquo;m assuming you should use <code>CGRect</code>
+instead of the <code>NSRect</code> since I think <code>CGRect</code> is also used on iOS.</p>
+
+<h3 id="nsrectfill-nsrect-fill"><code>NSRectFill</code> -&gt; <code>NSRect.fill()</code></h3>
+
+<p>The global of <code>NSRectFill</code> is replaced by instance functions, so you can call
+fill on <code>rect</code> instances it looks like. Most examples use the globals though.</p>
+
+<ul>
+<li><a href="https://twitter.com/jnadeau/status/873015119113969664?lang=en">https://twitter.com/jnadeau/status/873015119113969664?lang=en</a>
+
+<ul>
+<li>NSRectFill → rect.fill(), NSRectClip → rect.clip(), NSBeep →
+NSSound.beep()</li>
+</ul></li>
+</ul>
+
+<h3 id="order-matters">Order matters.</h3>
+
+<p>think of it like a painting as you add layers on, that is what gets rendered and
+you eventually see on the screen</p>
+
+<h3 id="creating-cgrect-s">Creating <code>CGRect</code>s</h3>
+
+<p>Most examples use this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kd">let</span> <span class="nv">cgrect</span> <span class="p">=</span> <span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span></code></pre></div>
+<p>But the swift way is to use an initializer on CGRect now:</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kd">let</span> <span class="nv">gcrect</span> <span class="p">=</span> <span class="n">CGRect</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mf">200.0</span><span class="p">)</span></code></pre></div>
+<h3 id="resources">Resources</h3>
+
+<ul>
+<li><a href="http://www.knowstack.com/drawing-in-swift-cocoa/">http://www.knowstack.com/drawing-in-swift-cocoa/</a></li>
+</ul>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/smerrell">
+    <img alt="Image of Sam Merrell" class="avatar avatar--small" src="https://smerrell.github.io/images/avatar.jpg">
+    <div>
+        <span class="dark">Sam Merrell</span>
+        <span>I like to learn new things.</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsmerrell.github.io%2fposts%2f2017%2f10%2fswift-4-drawing%2f - Swift%204%20Drawing by @smerrell">
+  <span class="icon-twitter"> Tweet</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/content/posts/2017/11/getting-to-know-swift/">Getting to Know Swift<aside class="dates">Nov 4 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2017/10/learning-swift/">Learning Swift<aside class="dates">Oct 16 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016/03/discovering-podcasts/">Discovering Podcasts<aside class="dates">Mar 16 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016/02/keeping-up-with-javascript/">Keeping up with JavaScript<aside class="dates">Feb 9 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016/01/using-qdslrdashboard-with-the-sony-a6000/">Using qDslrDashboard with the Sony a6000<aside class="dates">Jan 2 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2015/12/learning-rust-as-a-csharp-developer/">Learning Rust as a C# Developer<aside class="dates">Dec 23 2015</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/12/agile-is-hard/">Agile is Hard<aside class="dates">Dec 14 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/12/make-testing-easy/">Make Testing Easy<aside class="dates">Dec 6 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/12/looking-back-development-retrospective/">Looking Back: Development Retrospective<aside class="dates">Dec 1 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/11/giving-sublime-text-2-a-try/">Giving Sublime Text 2 A Try<aside class="dates">Nov 18 2012</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/smerrell">
+        roundedgithub
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/smerrell">
+        roundedtwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2017 Sam Merrell
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script async src="https://smerrell.github.io/js/main.js"></script>
+
+
+
+</body>
+</html>

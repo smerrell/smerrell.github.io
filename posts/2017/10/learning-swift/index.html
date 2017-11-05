@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Merrell">
+<meta name="description" content="Personal Blog">
+<meta name="generator" content="Hugo 0.30.2" />
+<title>Learning Swift</title>
+<link rel="shortcut icon" href="https://smerrell.github.io/images/favicon.ico">
+<link rel="stylesheet" href="https://smerrell.github.io/css/style.css">
+
+
+
+<link rel="stylesheet" href="https://smerrell.github.io/css/monosocialiconsfont.css">
+
+
+
+<link href="https://smerrell.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Sam Merrell" />
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-35739428-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-35739428-1');
+</script>
+
+<meta property="og:title" content="Learning Swift" />
+<meta property="og:description" content="Digging in" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://smerrell.github.io/posts/2017/10/learning-swift/" />
+
+
+
+<meta property="article:published_time" content="2017-10-16T22:22:52-06:00"/>
+
+<meta property="article:modified_time" content="2017-10-16T22:22:52-06:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Learning Swift">
+<meta itemprop="description" content="Digging in">
+
+
+<meta itemprop="datePublished" content="2017-10-16T22:22:52-06:00" />
+<meta itemprop="dateModified" content="2017-10-16T22:22:52-06:00" />
+<meta itemprop="wordCount" content="1511">
+
+
+
+<meta itemprop="keywords" content="Swift," />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Learning Swift"/>
+<meta name="twitter:description" content="Digging in"/>
+<meta name="twitter:site" content="@https://www.twitter.com/smerrell"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='https://smerrell.github.io/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+ 		<a href='/about/'>About</a>
+  	
+
+	
+		<a class="cta" href="https://smerrell.github.io/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Learning Swift</h1>
+        <h2 class="subtitle">Digging in</h2>
+        <h2 class="headline">
+        October 16, 2017
+        <br>
+        
+        
+            
+                <a href="https://smerrell.github.io/tags/swift">Swift</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Why do I want to learn Swift? For fun, I wanted to try writing a macOS app but
+didn&rsquo;t really want to learn Objective-C</p>
+
+<h2 id="what-i-m-reading">What I&rsquo;m Reading</h2>
+
+<p>App Development With Swift by Apple. Why? Because it was free and looked to be a
+pretty good intro to Swift. It focuses on iOS but I figured I could probably
+translate a lot of what I learn into macOS paradigms. That has mostly panned out
+from what I&rsquo;ve been doing.</p>
+
+<h2 id="notes">Notes</h2>
+
+<h3 id="interface-builder">Interface Builder</h3>
+
+<p>Looks to be pretty cool though I try to use the keyboard and that goes out the
+window with Interface Builder. Oh well.</p>
+
+<h3 id="handling-view-controllers">Handling View Controllers</h3>
+
+<p>Still learning how to really tame the view controller. There seem to be a few
+camps on how you might organize your code so you don&rsquo;t end up with massive view
+controllers. The tiny bit of WPF experience with using MVVM hasn&rsquo;t translated
+very well for me since I didn&rsquo;t really do it enough to get a good feel for
+native UI work. I&rsquo;ve mostly lived on the backend so this is different.</p>
+
+<p>A lot of what I&rsquo;ve seen uses Protocols to define a delegate and then you have
+your view controller implement that delegate. Then you can set your view
+controller as a delegate of a different class that does most of your logic.</p>
+
+<p>Other approaches seem to try to avoid the View Controller as much as possible,
+but feels like it takes a lot of glue to make that happen. Apple&rsquo;s description
+of how to do things hasn&rsquo;t been clear to me yet.</p>
+
+<h2 id="daily-notes">Daily Notes</h2>
+
+<p><strong>2017-10-16</strong></p>
+
+<p>Application Lifecycle</p>
+
+<ul>
+<li>Not Running</li>
+<li>Foreground
+
+<ul>
+<li>Inactive</li>
+<li>Active</li>
+</ul></li>
+<li>Background</li>
+<li>Suspended</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="n">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="n">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="n">UIApplicationLaunchOptionKey</span><span class="p">:</span> <span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+<span class="ln">2</span>    <span class="k">return</span> <span class="kc">true</span>
+<span class="ln">3</span><span class="p">}</span></code></pre></div>
+<p>First function called when the application starts.</p>
+
+<p>What are the launch options?</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kd">func</span> <span class="nf">applicationWillResignActive</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="n">UIApplication</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">2</span>
+<span class="ln">3</span><span class="p">}</span></code></pre></div>
+<p>Called when the app is about to leave the foreground state. Could be because the
+app is closing or got interrupted by something like a phone call. Should use it
+to save state.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kd">func</span> <span class="nf">applicationDidEnterBackground</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="n">UIApplication</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">2</span>
+<span class="ln">3</span><span class="p">}</span></code></pre></div>
+<p>Called after <code>applicationWillResignActive</code>, like that function use it to save
+state. If the func was called because of a user quitting the app, you have about
+5 seconds to finish up before the app is completely shut down.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kd">func</span> <span class="nf">applicationWillEnterForeground</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="n">UIApplication</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">2</span>
+<span class="ln">3</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kd">func</span> <span class="nf">applicationDidBecomeActive</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="n">UIApplication</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">2</span>
+<span class="ln">3</span><span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kd">func</span> <span class="nf">applicationWillTerminate</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="n">UIApplication</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">2</span>
+<span class="ln">3</span><span class="p">}</span></code></pre></div>
+<p><strong>2017-10-18</strong></p>
+
+<hr />
+
+<h2 id="apple-s-view-on-mvc">Apple&rsquo;s View on MVC</h2>
+
+<h3 id="views">Views</h3>
+
+<p>Apple says view classes often have an <code>update</code> or <code>configure</code> method that take
+in a model which the view then uses to display. Something like:</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="kc">_</span> <span class="n">player</span><span class="p">:</span> <span class="n">Player</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">2</span>
+<span class="ln">3</span><span class="p">}</span></code></pre></div>
+<p>The view talks to the view controller to perform actions on a model. The view
+usually is defined by Interface Builder so often it&rsquo;ll just be a Storyboard or
+maybe a nib/xib.</p>
+
+<h3 id="controllers">Controllers</h3>
+
+<p>Messenger between view and model, the view controller will have references to
+the view itself (and its elements like labels, buttons, etc) and the model.</p>
+
+<h4 id="view-controllers">View Controllers</h4>
+
+<p>These are by far the most common type, but Apple defines other types of
+controllers as well.</p>
+
+<h4 id="model-controllers">Model Controllers</h4>
+
+<p>These are controllers that sit in front of a model or collection of models and
+control how you access / update the model.</p>
+
+<p>Reasons you might want to do this?</p>
+
+<ul>
+<li>Multiple objects or scenes need access to the model data</li>
+<li>The logic for manipulating the objects is complex</li>
+<li>You want to keep the view controller code focused on managing the view</li>
+</ul>
+
+<h4 id="helper-controllers">Helper Controllers</h4>
+
+<p><em>note</em> Not a huge fan of the term helper, but&hellip;</p>
+
+<p>These are useful when you want to consolidate related data or functionality so
+it can be accessed by other objects in the app. An example might be a
+<code>NetworkController</code> that handles all the network access.</p>
+
+<h4 id="communicating">Communicating</h4>
+
+<p>Controllers are free to communicate with other controllers. This makes sense in
+the way apple describes controllers. You&rsquo;ll use them to coordinate actions such
+as having a NetworkController notify a NoteController there are new notes. That
+might then notify a NotesView controller to update the view with the new data.</p>
+
+<p><strong>2017-10-19</strong></p>
+
+<hr />
+
+<h3 id="models">Models</h3>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kd">struct</span> <span class="nc">Athelete</span> <span class="p">{</span>
+<span class="ln">2</span>    <span class="kd">var</span> <span class="nv">name</span><span class="p">:</span> <span class="nb">String</span>
+<span class="ln">3</span>    <span class="kd">var</span> <span class="nv">age</span><span class="p">:</span> <span class="nb">Int</span>
+<span class="ln">4</span>    <span class="kd">var</span> <span class="nv">league</span><span class="p">:</span> <span class="nb">String</span>
+<span class="ln">5</span>    <span class="kd">var</span> <span class="nv">team</span><span class="p">:</span> <span class="nb">String</span>
+<span class="ln">6</span><span class="p">}</span></code></pre></div>
+<h3 id="controllers-1">Controllers</h3>
+
+<p>Detail controller?
+Athlete model controller?
+    If I want to keep the view controller just focused on the view</p>
+
+<h4 id="functions">Functions</h4>
+
+<p>Add new athlete
+View current athlete
+Save athlete</p>
+
+<p>[Athlete]</p>
+
+<p><strong>2017-10-20</strong></p>
+
+<hr />
+
+<h2 id="scroll-views">Scroll Views</h2>
+
+<p><a href="https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/UIScrollView_pg/Introduction/Introduction.html">https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/UIScrollView_pg/Introduction/Introduction.html</a></p>
+
+<p><code>UIScrollView</code> for iOS, <code>NSScrollView</code> for macOS. The scroll view needs to know two things to function:</p>
+
+<ol>
+<li>position and size of scroll view (<code>frame</code> property)</li>
+<li>size of the content being displayed (<code>contentSize</code> property)</li>
+</ol>
+
+<p>troubles with autolayout of the scroll view. A stack view makes sense but it
+doesn&rsquo;t want to let me constrain it to the edges of the scroll view?</p>
+
+<p>Looks like there is a little more to auto layout when nesting a stack view
+inside a scroll view. The stack view needs to be constrained to the scroll view
+size and then you need to constrain either the width (by setting it equal to the
+scroll view, which can be done with right click / dragging) or the height
+depending on how you want it to scroll.</p>
+
+<p>I would assume that for images this isn&rsquo;t a problem because you want to scroll
+both horizontally and vertically but you already have the image size.</p>
+
+<h3 id="the-keyboard">The Keyboard</h3>
+
+<p>By default, if the keyboard shows it just covers your view. To handle that, you
+need to register when the keyboard is shown/hidden. You then adjust the padding
+of your view to push everything up above the keyboard.</p>
+
+<p>This must also be how other apps have added toolbars just above the keyboard.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln"> 1</span>  <span class="kd">func</span> <span class="nf">registerForKeyboardNotifications</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln"> 2</span>    <span class="n">NotificationCenter</span><span class="p">.</span><span class="k">default</span><span class="p">.</span><span class="n">addObserver</span><span class="p">(</span><span class="kc">self</span><span class="p">,</span> <span class="n">selector</span><span class="p">:</span> <span class="k">#selector</span><span class="p">(</span><span class="n">keyboardDidShow</span><span class="p">(</span><span class="kc">_</span><span class="p">:)),</span> <span class="n">name</span><span class="p">:</span> <span class="p">.</span><span class="n">UIKeyboardDidShow</span><span class="p">,</span> <span class="n">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="ln"> 3</span>
+<span class="ln"> 4</span>    <span class="n">NotificationCenter</span><span class="p">.</span><span class="k">default</span><span class="p">.</span><span class="n">addObserver</span><span class="p">(</span><span class="kc">self</span><span class="p">,</span> <span class="n">selector</span><span class="p">:</span> <span class="k">#selector</span><span class="p">(</span><span class="n">keyboardWillHide</span><span class="p">(</span><span class="kc">_</span><span class="p">:)),</span> <span class="n">name</span><span class="p">:</span> <span class="p">.</span><span class="n">UIKeyboardWillHide</span><span class="p">,</span> <span class="n">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="ln"> 5</span>  <span class="p">}</span>
+<span class="ln"> 6</span>
+<span class="ln"> 7</span>  <span class="kr">@objc</span> <span class="kd">func</span> <span class="nf">keyboardDidShow</span><span class="p">(</span><span class="kc">_</span> <span class="n">notification</span><span class="p">:</span> <span class="n">NSNotification</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 8</span>    <span class="k">guard</span> <span class="kd">let</span> <span class="nv">info</span> <span class="p">=</span> <span class="n">notification</span><span class="p">.</span><span class="n">userInfo</span><span class="p">,</span>
+<span class="ln"> 9</span>          <span class="kd">let</span> <span class="nv">keyboardFrameValue</span> <span class="p">=</span> <span class="n">info</span><span class="p">[</span><span class="n">UIKeyboardFrameBeginUserInfoKey</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="n">NSValue</span>
+<span class="ln">10</span>      <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+<span class="ln">11</span>
+<span class="ln">12</span>    <span class="kd">let</span> <span class="nv">keyboardFrame</span> <span class="p">=</span> <span class="n">keyboardFrameValue</span><span class="p">.</span><span class="n">cgRectValue</span>
+<span class="ln">13</span>    <span class="kd">let</span> <span class="nv">keyboardSize</span> <span class="p">=</span> <span class="n">keyboardFrame</span><span class="p">.</span><span class="n">size</span>
+<span class="ln">14</span>
+<span class="ln">15</span>    <span class="kd">let</span> <span class="nv">contentInsets</span> <span class="p">=</span> <span class="n">UIEdgeInsetsMake</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">keyboardSize</span><span class="p">.</span><span class="n">height</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="ln">16</span>    <span class="n">scrollView</span><span class="p">.</span><span class="n">contentInset</span> <span class="p">=</span> <span class="n">contentInsets</span>
+<span class="ln">17</span>    <span class="n">scrollView</span><span class="p">.</span><span class="n">scrollIndicatorInsets</span> <span class="p">=</span> <span class="n">contentInsets</span>
+<span class="ln">18</span>  <span class="p">}</span>
+<span class="ln">19</span>
+<span class="ln">20</span>  <span class="kr">@objc</span> <span class="kd">func</span> <span class="nf">keyboardWillHide</span><span class="p">(</span><span class="kc">_</span> <span class="n">notification</span><span class="p">:</span> <span class="n">NSNotification</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">21</span>    <span class="kd">let</span> <span class="nv">contentInsets</span> <span class="p">=</span> <span class="n">UIEdgeInsets</span><span class="p">.</span><span class="n">zero</span>
+<span class="ln">22</span>    <span class="n">scrollView</span><span class="p">.</span><span class="n">contentInset</span> <span class="p">=</span> <span class="n">contentInsets</span>
+<span class="ln">23</span>    <span class="n">scrollView</span><span class="p">.</span><span class="n">scrollIndicatorInsets</span> <span class="p">=</span> <span class="n">contentInsets</span>
+<span class="ln">24</span>  <span class="p">}</span></code></pre></div>
+<p><strong>2017-10-21</strong></p>
+
+<hr />
+
+<h2 id="scroll-view-with-an-image">Scroll View with an Image</h2>
+
+<p>Pretty simple, but you need to use <code>UIScrollViewDelegate</code> on the view
+controller. Then you return the view you want to zoom using the <code>viewForZooming</code>
+function.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kd">func</span> <span class="nf">viewForZooming</span><span class="p">(</span><span class="k">in</span> <span class="n">scrollView</span><span class="p">:</span> <span class="n">UIScrollView</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">UIView</span><span class="p">?</span> <span class="p">{</span>
+<span class="ln">2</span>    <span class="c1">// return the view you want here, for example an image could be:</span>
+<span class="ln">3</span>    <span class="k">return</span> <span class="n">imageView</span>
+<span class="ln">4</span><span class="p">}</span></code></pre></div>
+<p>use the <code>viewForZooming</code> func in the <code>viewDidLoad</code> like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="n">scrollView</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span></code></pre></div>
+<h2 id="uitableview">UITableView</h2>
+
+<p>Table views present as a scrolling, single column list.</p>
+
+<p>Two ways to use them:</p>
+
+<ol>
+<li>Add a table view instance directly to a view controller&rsquo;s view. You manage
+auto layout and everything. You&rsquo;re responsible for the data source and
+delegate object as well.</li>
+<li>Add to a storyboard. The table view would take up the entire view and gives
+you a table view controller which has extra advantages such as handling the
+view if the keyboard is visible.</li>
+</ol>
+
+<h3 id="styles">Styles</h3>
+
+<h4 id="plain">Plain</h4>
+
+<p>Rows can be separated into labeled sections with an optional index along the
+right side. Each section immediately follows the previous section with no
+spacing, creating an unbroken list.</p>
+
+<h4 id="grouped">Grouped</h4>
+
+<p>Rows are displayed in visually distinct groups, or sections, with spacing in
+between and without an index. (settings type pages are an example of this style)</p>
+
+<h3 id="editing">Editing</h3>
+
+<p>Is a thing.</p>
+
+<h3 id="table-view-cells">Table View Cells</h3>
+
+<p>Come in two basic formats. Regular cell and editing mode.</p>
+
+<p>Regular cell has two components. Cell Content, and Accessory View on the right</p>
+
+<p>Table Cell View - <code>[[cell content goes here][accessory view]]</code>
+Editing Table Cell View - <code>[[editing control][cell content goes here][accessory view]</code></p>
+
+<p>UITableViewCell has three properties for cell content</p>
+
+<ol>
+<li><code>textLabel</code> a <code>UILabel</code> for the title</li>
+<li><code>detailTextLabel</code> a <code>UILabel</code> for the subtitle (if there is additional detail)</li>
+<li><code>imageView</code> a <code>UIImageView</code> for an image</li>
+</ol>
+
+<p><strong>2017-10-22</strong></p>
+
+<hr />
+
+<p>Reuse of cells:</p>
+
+<p>Since you should be thinking about memory usage, the UITableView gives you the
+ability to reuse cells as you scroll. This comes from this method:</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kd">func</span> <span class="nf">dequeueReusableCell</span><span class="p">(</span><span class="n">withIdentifier</span> <span class="k">for</span><span class="p">:</span> <span class="p">)</span></code></pre></div>
+<h2 id="data-sources">Data sources</h2>
+
+<p>A Dynamic table view must have a data source and optionally a delegate.</p>
+
+<p>Often times, the data source is also the delegate. This isn&rsquo;t always true though
+but something that does happen. The UITableView delegates responsibility for
+configuring its own content.</p>
+
+<h3 id="uitableviewdatasource-protocol"><code>UITableViewDataSource</code> protocol</h3>
+
+<p>Defines three methods</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="ln">1</span><span class="kr">optional</span> <span class="kd">func</span> <span class="nf">numberOfSelections</span><span class="p">(</span><span class="k">in</span> <span class="n">tableView</span><span class="p">:</span> <span class="n">UITableView</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span>
+<span class="ln">2</span><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="kc">_</span> <span class="n">tableView</span><span class="p">:</span> <span class="n">UITableView</span><span class="p">,</span> <span class="n">numberOfRowsInSection</span> <span class="n">section</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span>
+<span class="ln">3</span><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="kc">_</span> <span class="n">tableView</span><span class="p">:</span> <span class="n">UITableView</span><span class="p">,</span> <span class="n">cellForRowAt</span> <span class="n">indexPath</span><span class="p">:</span> <span class="n">IndexPath</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">UITableViewCell</span></code></pre></div>
+<h3 id="cell-for-row-at-index-path">Cell for row at index path</h3>
+
+<p>Most implementations of this protocol will look something like this:</p>
+
+<ol>
+<li>Fetch the correct cell by dequeueing a cell</li>
+<li>Fetch the model object to be displayed</li>
+<li>Configure the cell&rsquo;s properties with the model object properties. i.e. set
+views (labels, image views, etc.) based on model object</li>
+<li>Return the fully configured cell</li>
+</ol>
+
+<p><strong>20172-7</strong></p>
+
+<hr />
+
+<h2 id="static-table-views">Static Table Views</h2>
+
+<p>Useful when you know you want the layout regardless of the content inside the
+view.</p>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/smerrell">
+    <img alt="Image of Sam Merrell" class="avatar avatar--small" src="https://smerrell.github.io/images/avatar.jpg">
+    <div>
+        <span class="dark">Sam Merrell</span>
+        <span>I like to learn new things.</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsmerrell.github.io%2fposts%2f2017%2f10%2flearning-swift%2f - Learning%20Swift by @smerrell">
+  <span class="icon-twitter"> Tweet</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/content/posts/2017/11/getting-to-know-swift/">Getting to Know Swift<aside class="dates">Nov 4 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2017/10/swift-4-drawing/">Swift 4 Drawing<aside class="dates">Oct 14 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016/03/discovering-podcasts/">Discovering Podcasts<aside class="dates">Mar 16 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016/02/keeping-up-with-javascript/">Keeping up with JavaScript<aside class="dates">Feb 9 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016/01/using-qdslrdashboard-with-the-sony-a6000/">Using qDslrDashboard with the Sony a6000<aside class="dates">Jan 2 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2015/12/learning-rust-as-a-csharp-developer/">Learning Rust as a C# Developer<aside class="dates">Dec 23 2015</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/12/agile-is-hard/">Agile is Hard<aside class="dates">Dec 14 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/12/make-testing-easy/">Make Testing Easy<aside class="dates">Dec 6 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/12/looking-back-development-retrospective/">Looking Back: Development Retrospective<aside class="dates">Dec 1 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/11/giving-sublime-text-2-a-try/">Giving Sublime Text 2 A Try<aside class="dates">Nov 18 2012</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/smerrell">
+        roundedgithub
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/smerrell">
+        roundedtwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2017 Sam Merrell
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script async src="https://smerrell.github.io/js/main.js"></script>
+
+
+
+</body>
+</html>
