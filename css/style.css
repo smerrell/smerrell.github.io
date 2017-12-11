@@ -1,19 +1,7 @@
-/* Reset */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
-*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-/* Clearfix */
-.clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-.hidden { display: none; }
-
-.figure--right {
-	float: right;
-	margin-left: 10px;
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Icons */
@@ -49,573 +37,244 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .icon-twitter-circled:before { content: '\e806'; }
 .icon-facebook-rect:before { content: '\e803'; }
 
-/* Spacing */
-.post h1, h3, h4, h5, p, .post-body ul, ol, pre {
-margin-bottom: 20px;
+/* Styles */
+html {
+	font-size: 1em;
 }
 
-/* Base */
-html, body { height: 100%; }
-
 body {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template:
+		"nav"
+		"main"
+		"footer";
+	grid-gap: 14px;
+
+	margin: 0;
+	padding: 0 14px;
+
 	font:16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #666;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
+	line-height: 1.45;
+}
+
+h1, h2, h3, h4 {
+	margin-top: 0;
+}
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
 }
 
 h1 {
-	font-size: 30px;
-	letter-spacing: -1px;
-	color: #222;
-	font-weight: bold;
+  margin-top: 0;
+  font-size: 2.074em;
 }
 
-h2 {
-	font: italic 19px/1.3em Georgia,serif;
-	color: black;
-}
+h2 {font-size: 1.728em;}
 
-.profile #wrapper {
-	padding: 100px 40px 0px;
-	max-width: 800px;
-	margin: 0 auto;
-}
+h3 {font-size: 1.44em;}
 
-.profile #header {
-	padding-bottom: 40px;
-	text-align: center;
-	position: relative;
-}
+h4 {font-size: 1.2em;}
 
-.profile h1 {
-	font-weight: 400;
-	letter-spacing: 0px;
-	font-size: 20px;
-	color: #222;
-}
-
-.profile h2 {
-	font-size: 20px;
-	  font-weight: 300;
-	  color: #aaa;
-	  margin-top: 10px;
-	  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	  font-style: normal;
-
-}
-
-nav.main-nav {
-	padding: 20px 20px 0;
-	background: #fff;
-	background: rgba(255,255,255,.90);
-	margin: 0 auto;
-	text-align: right;
-	z-index: 100;
-}
-
-nav.main-nav a {
-	top: 8px;
-	right: 6px;
-	padding: 8px 12px;
-	color: #0E5B9B;
-	font-size: 13px;
-	line-height: 1.35;
-	border-radius: 3px;
-
-}
-nav.main-nav a.cta {
-	background: #5badf0;
-	color: black;
-	margin-left: 12px;
-}
+small, .font_small {font-size: 0.833em;}
 
 #wrapper {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 60px 40px 100px 40px;
+	/* Need this because CSS Grid wants the grid to be no smaller than the content */
+	/* but we want to overflow the code samples on smaller screens */
+	min-width: 0;
+	grid-area: main;
 }
 
-#wrapper.home {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 0px 40px 20px 40px;
+#footer {
+	grid-area: footer;
 }
 
-/* Typography */
-/*Accent color*/
-a,
-#title,
-#post-list a:hover,
-#post-list h2:hover,
-#post-list li:hover .dates,
-#title:hover {
-	text-decoration: none;
-	color: #5694f1;
+#footer p {
+	text-align: center;
 }
 
-p a { color: #5694f1; }
-
-/*Transitions*/
-a,
-#post-nav a,
-#post-list h2,
-#post-list a	{
-	-webkit-transition: all 0.15s ease;
-	-moz-transition: all 0.15s ease;
-	-ms-transition: all 0.15s ease;
-	-o-transition: all 0.15s ease;
-	transition: all 0.15s ease;
+.main-nav {
+	grid-area: nav;
 }
 
-#post-body > ul {
-	padding-left: 1.1em;
+.main-nav ul {
+	display: flex;
+	justify-content: flex-end;
+	list-style: none;
 }
 
-/* Line Height */
-#post-body, p { line-height:1.7; }
-
-b, strong { font-weight: 500;
-  color: #1E2025; }
-em, i { font-style: italic; }
-
-#title {
-	display: inline-block;
-	line-height: 100%;
-	font-weight: 500;
-	font-size: 19px;
-	margin: 0;
-	padding-bottom: 20px;
+.main-nav li {
+	margin-left: 7px;
 }
 
-.description {
-	float: right;
-	font: italic 14px/1.4em Georgia,serif;
-	color: #aaa;
+.main-nav a {
+	color: #0E5B9B;
 }
 
-.home h1 {
-	font-size: 30px;
-	letter-spacing: -1px;
-	color: #222;
-	font-weight: bold;
+.main-nav .cta {
+	border-radius: 3px;
+	background: #5badf0;
+	color: black;
+	padding: 8px 12px;
 }
 
-.home h2 {
-	font: italic 19px/1.3em Georgia,serif;
-	color: #595959;
+.cta:hover {
+	background: #65bcff;
+}
+
+
+.highlight, .chroma, pre, code {
+	overflow: auto;
+}
+
+
+.post {
+	display: grid;
+	grid-gap: 14px;
+	grid-template: 
+		"post-heading"
+		"post-content"
+		"post-meta"
+		"ad1"
+		"post-comments"
+		"ad2"
+		"post-related";
+}
+
+#ad1, #ad2 {
+	min-width: 0;
+}
+
+#ad1 {
+	grid-area: ad1;
+}
+
+#ad2 {
+	grid-area: ad2;
+}
+
+#post-body {
+	/* Need this because CSS Grid wants the grid to be no smaller than the content */
+	/* but we want to overflow the code samples on smaller screens */
+	min-width: 0;
+	grid-area: post-content;
+}
+
+#post-body a {
+	word-break: break-all;
 }
 
 .post header {
-	text-align:center;
-
-}
-
-.post h1 {
-	margin-bottom: 0px;
-	color: #222;
-	font: 300 32px/1.4em "Helvetica Neue", Helvetica,Arial,sans-serif;
-}
-
-.post h2 {
-	margin-bottom: 20px;
-	font: 400 24px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;
-	color: #111;
-}
-
-.post h2.subtitle {
-	font: italic 19px/1.3em Georgia,serif;
-	color: #595959;
-}
-
-.post h2.headline {
-	/*font: italic 22px/1.3em Georgia,serif;*/
-	font: normal 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
-	margin: -5px 0 40px 0;
-	color: #b2b9be;
-	  font-size: 13px;
-	  text-transform: uppercase;
-	  letter-spacing: 2px;
-	  /*margin-top: 15px;*/
-	  display: inline-block;
-}
-
-h3, h4, h5 { color:#333; }
-h3 { font-size:24px; font-weight: 300; }
-h4 { font-size:16px; font-weight: bold; }
-h5 { font-size:15px; font-weight: bold; }
-h6 {
-	font-size: 13px;
-	font-weight: bold;
-	color: #666;
-	margin-bottom: 6px;
-}
-
-p.small {
-	color: #595959;
-	font-size: 14px;
-	line-height: 1.5;
-	display: block;
 	text-align: center;
-	margin-top: 20px;
+	margin-bottom: 56px;
+	grid-area: post-heading;
+}
+.post header h1 {
+	font-weight: 300;
+	margin: 0;
 }
 
-blockquote {
-	padding-left: 15px;
-	border-left: 3px solid #eee;
+.headline {
+	font-size: 0.833em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 
-hr {
-	display: block;
-	border: none;
-	height: 1px;
-	margin: 40px auto;
-	background: #eee;
+.post header h2 {
+	font-size: 1.125em;
+	line-height: 1.25em;
+	font-family: Georgia, serif;
+	font-style: italic;
+	margin: 0;
 }
 
-table {
-	width: 100%;
-	margin: 40px 0;
-	border-collapse: collapse;
-	font-size: 13px;
-	line-height: 1.5em;
+.figure--right {
+	float: none;
+	margin: 0 auto;
+	text-align: center;
 }
-
-th,td {
-	text-align: left;
-	padding-right: 20px;
-	vertical-align: top;
-}
-
-table td,td {
-	border-spacing: none;
-	border-style: solid;
-	padding: 10px 15px;
-	border-width: 1px 0 0 0;
-}
-
-tr > td {
-	border-top: 1px solid #eaeaea;
-}
-
-tr:nth-child(odd)>td {
-	background: #fcfcfc;
-}
-
-thead th,th {
-	text-align: left;
-	padding: 10px 15px;
-	height: 20px;
-	font-size: 13px;
-	font-weight: bold;
-	color: #444;
-	border-bottom: 1px solid #dadadc;
-	cursor: default;
-	white-space: nowrap;
-}
-
-img {
-	max-width: 100%;
-	border-radius: 3px;
-}
-
-/* Made with Cactus Badge */
-#badge {
-	position: absolute;
-	bottom: 8px;
-	right: 8px;
-	height: 48px;
-	width: 48px;
-}
-
-/*=========================================
-Post List
-=========================================== */
-#archive-list {
-	margin-top: 100px;
-}
-
 
 #post-list {
-	margin-bottom: 0;
+	display: flex;
+	flex-direction: column;
 }
 
-#post-list p {
-	font: normal 17px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
-	color: #aaa;
-	max-width: 400px;
-	margin-top: 2px;
+#post-list {
+	list-style: none;
+	padding: 0;
 }
 
-#post-list li,#archive-list li {
+#post-list li {
 	border-top: 1px solid #eee;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding: 24px 0;
 	list-style-type: none;
 	margin-bottom: 0;
 }
 
-#post-list li:last-child {
-	border-bottom: 1px solid #eee;
-}
-
-#post-list h2 {
-	font: bold 19px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
-}
-
-#post-list li a {
+#post-list a {
+	justify-content: space-between;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
-#post-list .dates {
-	top: 1px;
-	font: 300 17px/1.8 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #9e9e9e;
-}
-
-#post-list-footer {
-	border-top: 1px solid #eee;
-	margin-top: 20px;
-	padding-top: 100px;
-}
-
-#archive-link {
-	display: inline-block;
-	font-size: 13px;
-	font-weight: bold;
-	border-radius: 4px;
-	padding: 3px 10px 6px;
-	box-shadow: 0 0 0 1px hsla(207,83%,80%,1);
-}
-
-#archive-link:hover {
-	background: #5694f1;
-	color: #fff;
-	box-shadow: 0 0 0 1px #5694f1;
-}
-
-#archive-link span {
-	position: relative;
-	top: 0;
-	font-size: 17px;
-}
-
-#footer {
-	padding: 40px 0 0 0;
-}
-
-/* Post Page */
-.post {
-	margin: 80px 0 0 0;
+	color: black;
 }
 
 #post-meta {
-	font-size: 13px;
-	font-weight: bold;
-	line-height: 1.4;
-	border-top: 1px solid #eee;
-	padding-top: 40px;
-	margin-bottom: 40px;
-	padding-bottom: 40px;
-	margin-top: 40px;
-	color:#444;
-	border-bottom: 1px solid #eee;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
 }
 
-#post-meta div span {
-	color: #aaa;
+#post-meta a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-decoration: none;
+	line-height: 1em;
+}
+
+#post-meta p {
+	margin: 0;
+}
+
+#post-meta small {
+	color: #aaaaaa;
+}
+
+.dark {
+	color: black;
 	font-weight: 500;
-	display: block;
 }
 
-#post-meta div span.dark {
-	color: #1E2025;
-
+#social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-#post-meta div {
-	margin: 0 25px 0 0;
-	float: left;
+.symbol {
+    color: #cdd4da;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-right: 0.3rem;
 }
 
-#sharing {
-	float: right;
-	margin: -2px;
-}
-
-#sharing a {
-	font-size: 20px;
-	font-size: 23px;
-	margin-left: 1px;
-	margin-top: 4px;
-	color: #d4d4d4;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-#sharing a:hover {
-	opacity: 0.8;
-}
-
-/* Post Navigation */
-#post-nav {
-	text-align:center;
-	font-size:13px;
-	font-weight:500;
-	margin-top: 20px;
-}
-
-#post-nav span {
-	-webkit-transition: all 0.1s linear;
-	-moz-transition: all 0.1s linear;
-	-ms-transition: all 0.1s linear;
-	-o-transition: all 0.1s linear;
-	transition: all 0.1s linear;
-	position: relative;
-}
-
-#post-nav span.prev {
-	float: left;
-}
-
-#post-nav span.next {
-	float: right;
-}
-
-#post-nav span .arrow {
-	position: relative;
-	padding: 1px;
-}
-
-#post-nav span.prev:hover .arrow {
-	left: -4px;
-}
-
-#post-nav span.next:hover .arrow {
-	right: -4px;
-}
-
-#post-nav span.prev:hover {
-	left: -3px;
-}
-
-#post-nav span.next:hover {
-	right: -3px;
-}
-
-/* Archive */
-h1.archive {
-	margin-bottom: 0px;
-}
-
-h2.month {
-	width: 100%;
-	font: bold 13px/1 "Helvetica Neue",helvetica,Arial,sans-serif;
-	text-transform: uppercase;
-	margin-top: 40px;
-	margin-bottom: 10px;
-	padding-bottom: 10px;
-	border-bottom: 1px solid #eee;
-}
-
-#archive-list li:last-child {
-	margin-bottom: 0;
-}
-
-#archive-list a {
-	display: block;
-	font: bold 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #333;
-}
-
-#archive-list .dates {
-	float: right;
-	position: relative;
-	top: 1px;
-	font: 300 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #595959;
-
-}
-
-#archive-list li a:hover,#archive-list li:hover .dates {
-	color: #5694f1;
-}
-
-#post-list.archive.readmore h3{
-
-	  font: 400 20px "Helvetica Neue", Helvetica,Arial,sans-serif;
-	  margin-bottom: 30px;
-}
-
-#post-list.archive.readmore a{
-	font: 400 16px/1.6 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #5694f1;
-}
-
-#post-list.archive.readmore a:hover{
-	opacity: 0.8;
-}
-
-#post-list.archive.readmore .dates{
-	font: 300 16px/1.6 "Helvetica Neue",helvetica,Arial,sans-serif;
-}
-
-#sharing a.facebook {
-  background: #4361b3;
-}
-
-#sharing a.twitter {
-  background: #4fafed;
-}
-
-#sharing a {
-  font-size: 20px;
-  font-size: 13px;
-  font-weight: bold;
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 4px;
-  margin-left: 2px;
-}
-
-/* Media Queries */
-@media screen and (max-width: 540px) {
-	#wrapper { padding:20px 20px 20px 20px;}
-	.post { margin: 40px 0; }
-
-	#post-list, #archive-list { margin-top: 0; }
-	#post-meta { margin-top: 60px; }
-
-	#title { font-size: 17px; }
-	#post-list h2 {
-		flex-basis: 70%;
-	}
-
-	#post-list-footer { margin-top: 20px; padding-top: 40px; }
-
-	h1 { font-size: 26px; }
-	.post h2.headline { font-size: 13px; }
-	.post h1 { font-size:24px; }
-	.post h2 { font-size:20px; }
-	.figure--right {
-		float: none;
-		margin: 0 auto;
-		text-align: center;
-	}
-}
-
-@media screen and (max-width: 360px) {
-	#post-list h2 {
-		flex-basis: 100%;
-	}
+.symbol:hover {
+    color: #BCD4DA;
 }
 
 /* Avatar */
 .avatar {
 	border-radius: 50%;
+	box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee;
+	margin: 4px 14px 4px 4px;
 }
 
 .avatar--large {
@@ -628,46 +287,74 @@ h2.month {
   width: 36px;
 }
 
-.profile .avatar {
-	display: inline-block;
-	margin-bottom: 20px;
+#sharing a {
+	font-weight: bold;
+	color: #fff;
+	padding: 7px;
+	border-radius: 4px;
 }
 
-.home .avatar {
-	float: right;
+#sharing a.twitter {
+  background: #4fafed;
 }
 
-#post-meta .avatar {
-  float: left;
-  margin-top: 3px;
-  margin-right: 20px;
-  box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee;
+.profile {
+	text-align: center;
+	margin-bottom: 28px;
 }
 
-/* CUSTOM ADDITIONS */
-
-#social {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.profile a {
+	text-decoration: none;
+	color: black;
 }
 
-a.symbol {
-    color: #cdd4da;
-    font-size: 2rem;
-    text-decoration: none;
-    margin-right: 0.3rem;
+.profile h1,
+.profile h2 {
+	margin: 0;
 }
 
-a.symbol:hover {
-    color: #BCD4DA;
+.profile h2 {
+	font-weight: 100;
+	letter-spacing: 1.5px;
+}
+
+#post-list p {
+	font-size: .95rem;
+}
+
+#post-list h2,
+#post-list p {
+	margin: 0;
+}
+
+#post-list li a {
+	display: flex;
+	flex-direction: row;
+}
+
+#post-list li a aside {
+	flex-basis: 20%;
+	text-align: right;
+}
+
+#post-nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (min-width: 540px) {
+	#wrapper {
+		max-width: 800px;
+		justify-self: center;
+	}
+
+	.figure--right {
+		float: right;
+		margin-left: 10px;
+	}
 }
 
 /* Code */
-.chroma {
-	overflow: scroll
-}
-
 p > code {
 	padding: 0.2em;
 	margin: 0;
@@ -711,11 +398,11 @@ code {
 /* Text */ .chroma .s1f40 {  }
 /* Background */ .chroma { color: #f8f8f2; background-color: #272822 }
 /* Error */ .chroma .err { color: #960050; background-color: #1e0010 }
-/* LineTableTD */ .chroma .lntd { ; vertical-align: top; padding: 0; margin: 0; border: 0; }
-/* LineTable */ .chroma .lntable { ; border-spacing: 0; padding: 0; margin: 0; border: 0; width: 100%; overflow: auto; display: block; }
+/* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+/* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: 100%; overflow: auto; display: block; }
 /* LineHighlight */ .chroma .hl { background-color: #ffffcc; display: block; width: 100% }
-/* LineNumbersTable */ .chroma .lnt { ; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; display: block; }
-/* LineNumbers */ .chroma .ln { ; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; }
+/* LineNumbersTable */ .chroma .lnt { margin-right: 0.4em; padding: 0 0.4em 0 0.4em; display: block; }
+/* LineNumbers */ .chroma .ln { margin-right: 0.4em; padding: 0 0.4em 0 0.4em; }
 /* Keyword */ .chroma .k { color: #66d9ef }
 /* KeywordConstant */ .chroma .kc { color: #66d9ef }
 /* KeywordDeclaration */ .chroma .kd { color: #66d9ef }
