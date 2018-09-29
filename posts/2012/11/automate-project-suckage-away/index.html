@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Merrell">
+<meta name="description" content="Personal Blog">
+<meta name="generator" content="Hugo 0.49" />
+<title>Automate project suckage away</title>
+<link rel="shortcut icon" href="https://smerrell.github.io/images/favicon.ico">
+<link rel="stylesheet" href="https://smerrell.github.io/css/style.css">
+
+
+
+<link rel="stylesheet" href="https://smerrell.github.io/css/monosocialiconsfont.css">
+
+
+
+<link href="https://smerrell.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Sam Merrell" />
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-35739428-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-35739428-1');
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9184897924358853",
+    enable_page_level_ads: true
+  });
+</script>
+
+<meta property="og:title" content="Automate project suckage away" />
+<meta property="og:description" content="How much tedious work is involved in setting up and developing individual projects at your work? In my first post I wrote about how much tedious work is involved in setting up a new machine, now let&rsquo;s dig a little deeper to the project level.
+Automation at the project level is very much in line with Zach Holman&rsquo;s talk on automating machine setup. In his talk he mentions that each project has it&rsquo;s own setup scripts to get things up and running quickly." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://smerrell.github.io/posts/2012/11/automate-project-suckage-away/" /><meta property="article:published_time" content="2012-11-02T16:23:00&#43;00:00"/>
+<meta property="article:modified_time" content="2012-11-02T16:23:00&#43;00:00"/>
+
+
+
+<meta itemprop="name" content="Automate project suckage away">
+<meta itemprop="description" content="How much tedious work is involved in setting up and developing individual projects at your work? In my first post I wrote about how much tedious work is involved in setting up a new machine, now let&rsquo;s dig a little deeper to the project level.
+Automation at the project level is very much in line with Zach Holman&rsquo;s talk on automating machine setup. In his talk he mentions that each project has it&rsquo;s own setup scripts to get things up and running quickly.">
+
+
+<meta itemprop="datePublished" content="2012-11-02T16:23:00&#43;00:00" />
+<meta itemprop="dateModified" content="2012-11-02T16:23:00&#43;00:00" />
+<meta itemprop="wordCount" content="678">
+
+
+
+<meta itemprop="keywords" content="automation,dev-setup," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Automate project suckage away"/>
+<meta name="twitter:description" content="How much tedious work is involved in setting up and developing individual projects at your work? In my first post I wrote about how much tedious work is involved in setting up a new machine, now let&rsquo;s dig a little deeper to the project level.
+Automation at the project level is very much in line with Zach Holman&rsquo;s talk on automating machine setup. In his talk he mentions that each project has it&rsquo;s own setup scripts to get things up and running quickly."/>
+<meta name="twitter:site" content="@https://www.twitter.com/smerrell"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='https://smerrell.github.io/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+ 		<a href='/about/'>About</a>
+  	
+
+	
+		<a class="cta" href="https://smerrell.github.io/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Automate project suckage away</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        November 2, 2012
+        <br>
+        
+        
+            
+                <a href="https://smerrell.github.io/tags/automation">automation</a>
+            
+                <a href="https://smerrell.github.io/tags/dev-setup">dev-setup</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        <p>How much tedious work is involved in setting up and developing individual
+projects at your work? In my <a href="/blog/2012/10/19/chocolatey-machine-setup">first post</a>
+I wrote about how much tedious work is involved in setting up a new machine, now
+let&rsquo;s dig a little deeper to the project level.</p>
+
+<p>Automation at the project level is very much in line with Zach Holman&rsquo;s talk on
+automating machine setup. In his talk he mentions that each project has it&rsquo;s own
+setup scripts to get things up and running quickly. While working on a project
+at work, I&rsquo;ve come to realize how important automation is inside of individual
+projects as well. Automating processes inside a project can help in many ways.
+First, it makes us developers happy. We no longer have to keep doing the same
+boring thing over and over, and second it means the tedious task is done
+consistently and without error instead of by an error-prone manual process.</p>
+
+<p><strong>Windows Workflow Foundation&hellip;</strong></p>
+
+<p>The project at work that my team and I have been working on is called the IVR.
+It is the first thing a retiree interacts with when they call into our call
+center. Unfortunately the project for the IVR uses Windows Workflow Foundation
+which is&hellip; terrible to work with. Since it is a Microsoft product, the decision
+was to make the configuration and designing of the workflow using a GUI.
+Through that GUI the workflows are generated in a relatively unflattering XML
+representation. These are the .xoml files and the xoml rules files.</p>
+
+<p>To allow for dynamically changing how the call flow works, we&rsquo;ve loaded the xoml
+files and the grammars into the database. The xoml files control the overall
+flow of someone calling in and the grammars are used to recognize phrases or
+dial tones the person calling in says or dials (i.e. Say foo to go to bar or
+press 1). This works well for us having these files loaded into the database
+since we get a lot of flexibility in changing the IVR without redeploying.
+Unfortunately for us, Windows Workflow Foundation&rsquo;s editor of the xoml files
+screws them up if you open them. The problem is in declaring what assembly the
+worfklows use. It adds a specific version of the assemblies for the xoml files
+and doesn&rsquo;t fully declare the right namespace for the rules file.</p>
+
+<p>This makes it extremely tedious to modify any of our workflows because you have
+one of two options. Either you just don&rsquo;t use the editor and modify the xml
+directly or you deal with the changes the editor makes and you go back and fix
+it later. Either way really sucks since it involves so much tedious work.
+Fortunately for us, my coworker <a href="http://paceyourself.net">Bob</a> got tired of
+fixing the files over and over by hand.</p>
+
+<p><strong>Rake to the rescue</strong></p>
+
+<p>What Bob did was to make a couple rake tasks that go through every xoml file and
+rule file and uses a regex to remove the specific assembly versions, and add the
+missing declarations from the rule files. This has saved us so much time and
+headache from deploying the new changes and having it crash because it was
+looking for a specific assembly version.</p>
+
+<p>Not only that, but he added a rake task to add the new xoml and rule file
+declarations into a sql script so we can easily run the script and insert it
+into the database saving us even more time. The great thing about this is that
+it has saved us a significant amount of time and greatly reduced our frustration
+with the project.</p>
+
+<p><strong>Automation FTW</strong></p>
+
+<p>Even just these little bits of automation have significantly improved the ease
+of working on the project. We&rsquo;ve already talked about next steps on making
+things even easier to use. The biggest improvement being a way to automatically
+deploy the sql scripts we&rsquo;ve generated and deploy the dlls to our dev server.
+This experience has really shown me how much nicer development can be with
+seemingly simple automation tasks to reduce the tedious, manual work that can be
+involved with some projects.</p>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/smerrell">
+    <img alt="Image of Sam Merrell" class="avatar avatar--small" src="https://smerrell.github.io/images/avatar.jpg">
+    <div>
+        <span class="dark">Sam Merrell</span>
+        <span>I like to learn new things.</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsmerrell.github.io%2fposts%2f2012%2f11%2fautomate-project-suckage-away%2f - Automate%20project%20suckage%20away by @smerrell">
+  <span class="icon-twitter"> Tweet</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/2018/09/29/azure-web-apps-for-containers-using-terraform/">Azure Web App for Containers Using Terraform<aside class="dates">Sep 28 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2017/11/getting-to-know-swift/">Getting to Know Swift<aside class="dates">Nov 4 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016/03/discovering-podcasts/">Discovering Podcasts<aside class="dates">Mar 16 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016/02/keeping-up-with-javascript/">Keeping up with JavaScript<aside class="dates">Feb 9 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016/01/using-qdslrdashboard-with-the-sony-a6000/">Using qDslrDashboard with the Sony a6000<aside class="dates">Jan 2 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2015/12/learning-rust-as-a-csharp-developer/">Learning Rust as a C# Developer<aside class="dates">Dec 23 2015</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/12/agile-is-hard/">Agile is Hard<aside class="dates">Dec 14 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/12/make-testing-easy/">Make Testing Easy<aside class="dates">Dec 6 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/12/looking-back-development-retrospective/">Looking Back: Development Retrospective<aside class="dates">Dec 1 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/11/giving-sublime-text-2-a-try/">Giving Sublime Text 2 A Try<aside class="dates">Nov 18 2012</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/smerrell">
+        roundedgithub
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/smerrell">
+        roundedtwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 Sam Merrell
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script async src="https://smerrell.github.io/js/main.js"></script>
+
+
+
+</body>
+</html>

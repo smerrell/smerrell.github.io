@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Merrell">
+<meta name="description" content="Personal Blog">
+<meta name="generator" content="Hugo 0.49" />
+<title>Make Testing Easy</title>
+<link rel="shortcut icon" href="https://smerrell.github.io/images/favicon.ico">
+<link rel="stylesheet" href="https://smerrell.github.io/css/style.css">
+
+
+
+<link rel="stylesheet" href="https://smerrell.github.io/css/monosocialiconsfont.css">
+
+
+
+<link href="https://smerrell.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Sam Merrell" />
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-35739428-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-35739428-1');
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9184897924358853",
+    enable_page_level_ads: true
+  });
+</script>
+
+<meta property="og:title" content="Make Testing Easy" />
+<meta property="og:description" content="Testing. We all know that we should do it, and yet often times we find ourselves struggling to stay consistent in testing our code. I know that I personally find it difficult sometimes to really stick to and test my code, and guess what happens when you don&rsquo;t test your code. It comes back to haunt you.
+I was discussing this with my coworker Ryan about this very problem, and it got me thinking I should write it down." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://smerrell.github.io/posts/2012/12/make-testing-easy/" /><meta property="article:published_time" content="2012-12-06T23:26:00&#43;00:00"/>
+<meta property="article:modified_time" content="2012-12-06T23:26:00&#43;00:00"/>
+
+
+
+<meta itemprop="name" content="Make Testing Easy">
+<meta itemprop="description" content="Testing. We all know that we should do it, and yet often times we find ourselves struggling to stay consistent in testing our code. I know that I personally find it difficult sometimes to really stick to and test my code, and guess what happens when you don&rsquo;t test your code. It comes back to haunt you.
+I was discussing this with my coworker Ryan about this very problem, and it got me thinking I should write it down.">
+
+
+<meta itemprop="datePublished" content="2012-12-06T23:26:00&#43;00:00" />
+<meta itemprop="dateModified" content="2012-12-06T23:26:00&#43;00:00" />
+<meta itemprop="wordCount" content="770">
+
+
+
+<meta itemprop="keywords" content="testing," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Make Testing Easy"/>
+<meta name="twitter:description" content="Testing. We all know that we should do it, and yet often times we find ourselves struggling to stay consistent in testing our code. I know that I personally find it difficult sometimes to really stick to and test my code, and guess what happens when you don&rsquo;t test your code. It comes back to haunt you.
+I was discussing this with my coworker Ryan about this very problem, and it got me thinking I should write it down."/>
+<meta name="twitter:site" content="@https://www.twitter.com/smerrell"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='https://smerrell.github.io/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+ 		<a href='/about/'>About</a>
+  	
+
+	
+		<a class="cta" href="https://smerrell.github.io/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Make Testing Easy</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        December 6, 2012
+        <br>
+        
+        
+            
+                <a href="https://smerrell.github.io/tags/testing">testing</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<p>Testing. We all know that we should do it, and yet often times we find
+ourselves struggling to stay consistent in testing our code. I know that I
+personally find it difficult sometimes to really stick to and test my code,
+and guess what happens when you don&rsquo;t test your code. It comes back to haunt
+you.</p>
+
+<p>I was discussing this with my coworker <a href="http://ryanhauert.com">Ryan</a> about
+this very problem, and it got me thinking I should write it down. (It also
+helps he suggested it would be a possible blog post topic, so thanks Ryan).</p>
+
+<h1 id="when-i-test">When I Test</h1>
+
+<p>At Extend Health, I&rsquo;ve been working on a specific project for quite some time
+now. I got the privilege to start out with a new greenfield project and have
+watched it transform over the last year. When we first started out, we had to
+keep our business process running by pretty much glue and duct tape to make it
+through the Annual Enrollment Period. Those were rough times filled with
+taking an existing Microsoft Access project and getting it to talk to SQL
+server on the backend so the data was at least in one place.</p>
+
+<p>It was rough, but interestingly we were determined to keep things tested.
+Since basically all logic had to go into the DB at the time, we looked at SQL
+testing frameworks. We stumbled on <a href="http://tsqlt.org/">tsqlt</a> and found it
+helped us quite a bit. But even with a testing framework we found it very
+difficult to write tests.</p>
+
+<p>On the next revision of our project, we got to start completely fresh and
+built our system using CQRS and Event Sourcing. With a clean code base and
+pretty good discipline, we were able to consistently keep our code tested and
+often we wrote test first. Not always, but a good portion of the time anyway.</p>
+
+<h1 id="then-things-get-hard">Then Things Get Hard</h1>
+
+<p>After working on my last project, I got some time to add to a large project we
+have based around WPF and <a href="http://caliburn.codeplex.com/">Caliburn</a>. This is
+when I noticed I started to throw my testing habits out the window and just
+cowboy code everything. But why would I knowingly throw testing out the
+window?</p>
+
+<p>Then I sat down and thought about it. What was the main thing that I was using
+to justify my lack of tests, even though I know I should be doing them? It
+really came down to one thing for me, testing the code base was <em>hard</em>. Boo
+hoo, right? But it really comes down to friction making tests surpassing my
+will to write the test.</p>
+
+<h1 id="well-what-do-we-do-about-this">Well What Do We Do About This?</h1>
+
+<p>So what exactly do we do about this so we actually test our code? I&rsquo;m going to
+throw my favorite programmer answer at that one: it depends. I know, I know,
+that is the lame answer but it really is true from what I can tell. Really it
+just depends on if you&rsquo;re working with existing code or starting out fresh.
+Since it isn&rsquo;t too common to just get a new, fresh codebase to start with lets
+look at the existing code problem.</p>
+
+<p>The way I see it, there really is only one way to go with an existing
+solution. You can start by beefing up your test helpers to make setup as
+painless as possible, and while you&rsquo;re doing that you get a bonus. It helps
+you identify areas in your code that are very painful to test. Once you&rsquo;ve got
+your test helpers automating the suck away as much as possible, you can start
+to identify the most problematic code to test.</p>
+
+<p>Perhaps you have un-mockable or difficult to mock classes? God objects being
+used everywhere? Either way, once you identify the problem areas you can pick
+them apart one by one and write the new code using tests, of course. Obviously
+it sucks to have to do this slowly but I don&rsquo;t really see another way to take
+it besides griding down the painful pieces as you can.</p>
+
+<h1 id="so-the-moral-of-the-story-is">So The Moral Of The Story Is</h1>
+
+<p>You&rsquo;ve got to make your code easy to test or you are going to find ways to
+convince yourself you don&rsquo;t need to write them. Simple I know, but it helps to
+stay disciplined when the code lends itself to testing. If you have a codebase
+that is really difficult to test, then it is worth the investment to make it
+as easy as possible. This means you can make helpers for the tests while you
+chip away at the really hard parts of the code. In the end, you&rsquo;ll thank
+yourself for doing it.</p>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/smerrell">
+    <img alt="Image of Sam Merrell" class="avatar avatar--small" src="https://smerrell.github.io/images/avatar.jpg">
+    <div>
+        <span class="dark">Sam Merrell</span>
+        <span>I like to learn new things.</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsmerrell.github.io%2fposts%2f2012%2f12%2fmake-testing-easy%2f - Make%20Testing%20Easy by @smerrell">
+  <span class="icon-twitter"> Tweet</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/2018/09/29/azure-web-apps-for-containers-using-terraform/">Azure Web App for Containers Using Terraform<aside class="dates">Sep 28 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2017/11/getting-to-know-swift/">Getting to Know Swift<aside class="dates">Nov 4 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016/03/discovering-podcasts/">Discovering Podcasts<aside class="dates">Mar 16 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016/02/keeping-up-with-javascript/">Keeping up with JavaScript<aside class="dates">Feb 9 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016/01/using-qdslrdashboard-with-the-sony-a6000/">Using qDslrDashboard with the Sony a6000<aside class="dates">Jan 2 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2015/12/learning-rust-as-a-csharp-developer/">Learning Rust as a C# Developer<aside class="dates">Dec 23 2015</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/12/agile-is-hard/">Agile is Hard<aside class="dates">Dec 14 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/12/looking-back-development-retrospective/">Looking Back: Development Retrospective<aside class="dates">Dec 1 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/11/giving-sublime-text-2-a-try/">Giving Sublime Text 2 A Try<aside class="dates">Nov 18 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/11/open-source-changing-work/">Open Source Changing How We Work<aside class="dates">Nov 16 2012</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/smerrell">
+        roundedgithub
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/smerrell">
+        roundedtwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 Sam Merrell
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script async src="https://smerrell.github.io/js/main.js"></script>
+
+
+
+</body>
+</html>
