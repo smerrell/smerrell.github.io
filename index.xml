@@ -13,10 +13,10 @@
     
     <item>
       <title>Azure Web App for Containers Using Terraform</title>
-      <link>https://smerrell.github.io/posts/2018/09/29/azure-web-apps-for-containers-using-terraform/</link>
+      <link>https://smerrell.github.io/posts/2018/09/28/azure-web-apps-for-containers-using-terraform/</link>
       <pubDate>Fri, 28 Sep 2018 16:17:32 -0600</pubDate>
       
-      <guid>https://smerrell.github.io/posts/2018/09/29/azure-web-apps-for-containers-using-terraform/</guid>
+      <guid>https://smerrell.github.io/posts/2018/09/28/azure-web-apps-for-containers-using-terraform/</guid>
       <description>Recently at work I have been tasked with helping our organization transition from our traditional on-premises infrastructure to Azure. To do that, I&amp;rsquo;ve been learning how to automate our infrastructure by using HashiCorp&amp;rsquo;s Terraform. Terraform was introduced to me by a few members of our infrastructure team and I&amp;rsquo;ve found it quite fun to work with.
 As I&amp;rsquo;ve been working on what direction we&amp;rsquo;d like to head, I&amp;rsquo;ve focused on new apps using Platform as a Service, specifically Azure Web Apps.</description>
     </item>
