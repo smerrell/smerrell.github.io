@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://smerrell.github.io/posts/azure-devops-pipelines-with-functions/</loc>
+    <lastmod>2018-11-10T16:13:53-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://smerrell.github.io/posts/2018/09/28/azure-web-apps-for-containers-using-terraform/</loc>
     <lastmod>2018-09-28T16:17:32-06:00</lastmod>
   </url>
@@ -95,6 +100,18 @@
   </url>
   
   <url>
+    <loc>https://smerrell.github.io/tags/azure/</loc>
+    <lastmod>2018-09-28T16:17:32-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://smerrell.github.io/tags/azure-functions/</loc>
+    <lastmod>2018-11-10T16:13:53-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://smerrell.github.io/tags/bash/</loc>
     <lastmod>2012-10-26T16:48:00+00:00</lastmod>
     <priority>0</priority>
@@ -126,6 +143,18 @@
   <url>
     <loc>https://smerrell.github.io/categories/development/</loc>
     <lastmod>2017-11-04T16:32:53-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://smerrell.github.io/tags/devops/</loc>
+    <lastmod>2018-11-10T16:13:53-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://smerrell.github.io/categories/devops/</loc>
+    <lastmod>2018-11-10T16:13:53-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -179,7 +208,7 @@
   
   <url>
     <loc>https://smerrell.github.io/posts/</loc>
-    <lastmod>2018-09-28T16:17:32-06:00</lastmod>
+    <lastmod>2018-11-10T16:13:53-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -203,7 +232,7 @@
   
   <url>
     <loc>https://smerrell.github.io/</loc>
-    <lastmod>2018-09-28T16:17:32-06:00</lastmod>
+    <lastmod>2018-11-10T16:13:53-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -216,6 +245,12 @@
   <url>
     <loc>https://smerrell.github.io/tags/shell-scripting/</loc>
     <lastmod>2012-10-26T16:48:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://smerrell.github.io/categories/software/</loc>
+    <lastmod>2018-11-10T16:13:53-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -252,6 +287,12 @@
   <url>
     <loc>https://smerrell.github.io/tags/</loc>
     <lastmod>2012-12-14T16:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://smerrell.github.io/tags/terraform/</loc>
+    <lastmod>2018-09-28T16:17:32-06:00</lastmod>
     <priority>0</priority>
   </url>
   

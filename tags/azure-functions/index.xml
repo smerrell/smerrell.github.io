@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Azure Functions on Sam Merrell</title>
+    <link>https://smerrell.github.io/tags/azure-functions/</link>
+    <description>Recent content in Azure Functions on Sam Merrell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Nov 2018 16:13:53 -0700</lastBuildDate>
+    
+	<atom:link href="https://smerrell.github.io/tags/azure-functions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Azure DevOps Exploration</title>
+      <link>https://smerrell.github.io/posts/azure-devops-pipelines-with-functions/</link>
+      <pubDate>Sat, 10 Nov 2018 16:13:53 -0700</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/azure-devops-pipelines-with-functions/</guid>
+      <description>Building software has always been a hassle. Over the years, the effort it takes to create a reliable build system has decreased drastically. Tools like Travis CI dramatically reduce the time and effort it takes to go from nothing to a functioning continuous integration pipeline. I&amp;rsquo;ve tried a few CI tools like Travis, AppVeyor, and TeamCity. One CI application I had not tried, was Visual Studio Team Services — better known as VSTS.</description>
+    </item>
+    
+  </channel>
+</rss>

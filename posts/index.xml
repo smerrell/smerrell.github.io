@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Sam Merrell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Sep 2018 16:17:32 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 10 Nov 2018 16:13:53 -0700</lastBuildDate>
     
 	<atom:link href="https://smerrell.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Azure DevOps Exploration</title>
+      <link>https://smerrell.github.io/posts/azure-devops-pipelines-with-functions/</link>
+      <pubDate>Sat, 10 Nov 2018 16:13:53 -0700</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/azure-devops-pipelines-with-functions/</guid>
+      <description>Building software has always been a hassle. Over the years, the effort it takes to create a reliable build system has decreased drastically. Tools like Travis CI dramatically reduce the time and effort it takes to go from nothing to a functioning continuous integration pipeline. I&amp;rsquo;ve tried a few CI tools like Travis, AppVeyor, and TeamCity. One CI application I had not tried, was Visual Studio Team Services — better known as VSTS.</description>
+    </item>
     
     <item>
       <title>Azure Web App for Containers Using Terraform</title>

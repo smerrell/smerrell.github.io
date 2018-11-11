@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software on Sam Merrell</title>
+    <link>https://smerrell.github.io/categories/software/</link>
+    <description>Recent content in Software on Sam Merrell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Nov 2018 16:13:53 -0700</lastBuildDate>
+    
+	<atom:link href="https://smerrell.github.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Azure DevOps Exploration</title>
+      <link>https://smerrell.github.io/posts/azure-devops-pipelines-with-functions/</link>
+      <pubDate>Sat, 10 Nov 2018 16:13:53 -0700</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/azure-devops-pipelines-with-functions/</guid>
+      <description>Building software has always been a hassle. Over the years, the effort it takes to create a reliable build system has decreased drastically. Tools like Travis CI dramatically reduce the time and effort it takes to go from nothing to a functioning continuous integration pipeline. I&amp;rsquo;ve tried a few CI tools like Travis, AppVeyor, and TeamCity. One CI application I had not tried, was Visual Studio Team Services — better known as VSTS.</description>
+    </item>
+    
+    <item>
+      <title>Azure Web App for Containers Using Terraform</title>
+      <link>https://smerrell.github.io/posts/2018/09/28/azure-web-apps-for-containers-using-terraform/</link>
+      <pubDate>Fri, 28 Sep 2018 16:17:32 -0600</pubDate>
+      
+      <guid>https://smerrell.github.io/posts/2018/09/28/azure-web-apps-for-containers-using-terraform/</guid>
+      <description>Recently at work I have been tasked with helping our organization transition from our traditional on-premises infrastructure to Azure. To do that, I&amp;rsquo;ve been learning how to automate our infrastructure by using HashiCorp&amp;rsquo;s Terraform. Terraform was introduced to me by a few members of our infrastructure team and I&amp;rsquo;ve found it quite fun to work with.
+As I&amp;rsquo;ve been working on what direction we&amp;rsquo;d like to head, I&amp;rsquo;ve focused on new apps using Platform as a Service, specifically Azure Web Apps.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -30,6 +30,24 @@
     </item>
     
     <item>
+      <title>Azure</title>
+      <link>https://smerrell.github.io/tags/azure/</link>
+      <pubDate>Fri, 28 Sep 2018 16:17:32 -0600</pubDate>
+      
+      <guid>https://smerrell.github.io/tags/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Functions</title>
+      <link>https://smerrell.github.io/tags/azure-functions/</link>
+      <pubDate>Sat, 10 Nov 2018 16:13:53 -0700</pubDate>
+      
+      <guid>https://smerrell.github.io/tags/azure-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Bash</title>
       <link>https://smerrell.github.io/tags/bash/</link>
       <pubDate>Fri, 26 Oct 2012 16:48:00 +0000</pubDate>
@@ -62,6 +80,15 @@
       <pubDate>Fri, 02 Nov 2012 16:23:00 +0000</pubDate>
       
       <guid>https://smerrell.github.io/tags/dev-setup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Devops</title>
+      <link>https://smerrell.github.io/tags/devops/</link>
+      <pubDate>Sat, 10 Nov 2018 16:13:53 -0700</pubDate>
+      
+      <guid>https://smerrell.github.io/tags/devops/</guid>
       <description></description>
     </item>
     
@@ -215,6 +242,15 @@
       <pubDate>Sat, 04 Nov 2017 16:32:53 -0600</pubDate>
       
       <guid>https://smerrell.github.io/tags/swift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terraform</title>
+      <link>https://smerrell.github.io/tags/terraform/</link>
+      <pubDate>Fri, 28 Sep 2018 16:17:32 -0600</pubDate>
+      
+      <guid>https://smerrell.github.io/tags/terraform/</guid>
       <description></description>
     </item>
     

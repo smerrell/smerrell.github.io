@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Merrell">
+<meta name="description" content="Personal Blog">
+<meta name="generator" content="Hugo 0.50" />
+<title>Azure DevOps Exploration</title>
+<link rel="shortcut icon" href="https://smerrell.github.io/images/favicon.ico">
+<link rel="stylesheet" href="https://smerrell.github.io/css/style.css">
+
+
+
+<link rel="stylesheet" href="https://smerrell.github.io/css/monosocialiconsfont.css">
+
+
+
+<link href="https://smerrell.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Sam Merrell" />
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-35739428-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-35739428-1');
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9184897924358853",
+    enable_page_level_ads: true
+  });
+</script>
+
+<meta property="og:title" content="Azure DevOps Exploration" />
+<meta property="og:description" content="Deploy an Azure Function using Azure Pipelines" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://smerrell.github.io/posts/azure-devops-pipelines-with-functions/" /><meta property="article:published_time" content="2018-11-10T16:13:53-07:00"/>
+<meta property="article:modified_time" content="2018-11-10T16:13:53-07:00"/>
+
+
+
+<meta itemprop="name" content="Azure DevOps Exploration">
+<meta itemprop="description" content="Deploy an Azure Function using Azure Pipelines">
+
+
+<meta itemprop="datePublished" content="2018-11-10T16:13:53-07:00" />
+<meta itemprop="dateModified" content="2018-11-10T16:13:53-07:00" />
+<meta itemprop="wordCount" content="1889">
+
+
+
+<meta itemprop="keywords" content="Azure Functions,DevOps," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Azure DevOps Exploration"/>
+<meta name="twitter:description" content="Deploy an Azure Function using Azure Pipelines"/>
+<meta name="twitter:site" content="@https://www.twitter.com/smerrell"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='https://smerrell.github.io/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+ 		<a href='/about/'>About</a>
+  	
+
+	
+		<a class="cta" href="https://smerrell.github.io/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Azure DevOps Exploration</h1>
+        <h2 class="subtitle">Deploy an Azure Function using Azure Pipelines</h2>
+        <h2 class="headline">
+        November 10, 2018
+        <br>
+        
+        
+            
+                <a href="https://smerrell.github.io/tags/azure-functions">Azure Functions</a>
+            
+                <a href="https://smerrell.github.io/tags/devops">DevOps</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<p>Building software has always been a hassle. Over the years, the effort it takes to create a reliable build system has decreased drastically. Tools like <a href="https://travis-ci.org">Travis CI</a> dramatically reduce the time and effort it takes to go from nothing to a functioning continuous integration pipeline. I&rsquo;ve tried a few CI tools like Travis, AppVeyor, and TeamCity. One CI application I had not tried, was Visual Studio Team Services  — better known as VSTS. Microsoft rebranded VSTS to Azure DevOps in September, so what better time to give Azure DevOps a try?</p>
+
+<p>In order to test out Azure DevOps, I needed a project. Luckily, I had one — a Pomodoro application I have been writing for my Mac. Right now, the app tracks how many pomodoros I&rsquo;ve completed in memory. Instead of trying to store the completed pomodoros locally, why not push those events into an Azure Function where it could save that information into Azure Table Storage? With a project in mind, I got started.</p>
+
+<h2 id="what-is-azure-devops">What is Azure DevOps?</h2>
+
+<p>Azure DevOps started its life as VSTS which bundled several tools into one application. Azure DevOps still has those same tools, but you can choose which of the tools you would like to use. So what are the tools available? First, you have Azure Pipelines. Pipelines seem to be the most publicized of the tools, and it happens to be what I&rsquo;m most interested in learning. Pipelines provide two main things: build pipelines and release pipelines. Along with Pipelines, there is Azure Boards which is a Kanban board. Azure Artifacts hosts software artifacts such as NPM packages or Nuget Packages. Azure Repos lets you host your source code. Finally, there is Azure Test Plans which does what it describes — create, manage, and execute test plans.</p>
+
+<h2 id="creating-an-organization">Creating an Organization</h2>
+
+<p>To get started with Azure DevOps, I needed to create an organization. Going through the setup process was simple, I gave my organization a unique name and a region I wanted to host my projects in. After that, my organization was created. That was quick and easy, but I would love to be able to script the creation of an organization. From what research I did, that does not seem like it is possible yet. That isn&rsquo;t a huge issue, but I very much prefer to have all my infrastructure setup and configuration done through automation and not by clicking through the portal.</p>
+
+<p><img src="/images/posts/create-devops-project.png" alt="Azure DevOps screen to create a project" /></p>
+
+<h2 id="my-first-project">My First Project</h2>
+
+<p>With my organization created, I was able to get started on my project.</p>
+
+<p><img src="/images/posts/create-devops-project.png" alt="Azure DevOps UI to create a new Project" /></p>
+
+<p>Creating a project was as simple as picking a name and hitting create. From there, the project was created and all the services enabled. Since I only planned on using Pipelines, I went into the settings and unchecked the services I did not need. Easy.</p>
+
+<h2 id="the-build-pipeline">The Build Pipeline</h2>
+
+<p>Next step, I created my first build pipeline. After clicking on Pipelines and then the New pipeline button I was faced with a problem.</p>
+
+<p><img src="/images/posts/devops-build-pipeline.png" alt="Azure DevOps screen to create a build pipeline" /></p>
+
+<p>I was planning on hosting the function code in GitLab since that is where I host the code to the Pomodoro app. I want to keep that code private for now and I didn&rsquo;t want to spend time making GitLab work, I gave Azure Repos a try. Now, I realize I could have hooked up the pipeline to GitLab, but Azure Repos is working well for me. Enough so, that I plan on keeping the source code there and I might also move the repository for my Mac application as well.</p>
+
+<p>I selected the newly created repository and then I was presented with a list of templates to start my build pipeline. Scrolling through the templates I noticed Microsoft has built steps for many common types of applications. From .NET, .NET Core, C++, Python, Ruby, Node, Docker to Xamarin or Xcode projects. It is clear that Azure DevOps will work with any project and that Microsoft wants you to know that.</p>
+
+<h3 id="defining-the-build">Defining the Build</h3>
+
+<p>I started with the suggested Starter Pipeline template. Once I selected the template, I was given an editor showing the contents of the template. This is the template in its entirety:</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="ln"> 1</span><span class="c"># Starter pipeline</span><span class="w">
+</span><span class="ln"> 2</span><span class="w"></span><span class="c"># Start with a minimal pipeline that you can customize to build and deploy your code.</span><span class="w">
+</span><span class="ln"> 3</span><span class="w"></span><span class="c"># Add steps that build, run tests, deploy, and more:</span><span class="w">
+</span><span class="ln"> 4</span><span class="w"></span><span class="c"># https://aka.ms/yaml</span><span class="w">
+</span><span class="ln"> 5</span><span class="w">
+</span><span class="ln"> 6</span><span class="w"></span>pool<span class="p">:</span><span class="w">
+</span><span class="ln"> 7</span><span class="w">  </span>vmImage<span class="p">:</span><span class="w"> </span><span class="s1">&#39;Ubuntu 16.04&#39;</span><span class="w">
+</span><span class="ln"> 8</span><span class="w">
+</span><span class="ln"> 9</span><span class="w"></span>steps<span class="p">:</span><span class="w">
+</span><span class="ln">10</span><span class="w"></span>-<span class="w"> </span>script<span class="p">:</span><span class="w"> </span>echo<span class="w"> </span>Hello<span class="p">,</span><span class="w"> </span>world!<span class="w">
+</span><span class="ln">11</span><span class="w">  </span>displayName<span class="p">:</span><span class="w"> </span><span class="s1">&#39;Run a one-line script&#39;</span><span class="w">
+</span><span class="ln">12</span><span class="w">
+</span><span class="ln">13</span><span class="w"></span>-<span class="w"> </span>script<span class="p">:</span><span class="w"> </span><span class="sd">|
+</span><span class="ln">14</span><span class="sd">    echo Add other tasks to build, test, and deploy your project.
+</span><span class="ln">15</span><span class="sd">    echo See https://aka.ms/yaml</span><span class="w">
+</span><span class="ln">16</span><span class="w">  </span>displayName<span class="p">:</span><span class="w"> </span><span class="s1">&#39;Run a multi-line script&#39;</span></code></pre></div>
+<p>Pretty straightforward. This prompted me to look at each component of the YAML file to try and understand what it was describing. the <code>pool</code> section describes what sort of VM to run the build on. Since I am using an Azure Function V2, I&rsquo;m using .NET Core so an Ubuntu image works nicely. Microsoft provides other images to use and you also can manage your own VMs to run the Pipelines Service. That isn&rsquo;t something I wanted to do so I stuck with the Ubuntu image.</p>
+
+<p>The next section is <code>steps</code>. Looking at it was easy enough to understand. Each item in the list is executed one after the other. The example has a single line script and a multi-line script. Since I wanted to see what the build would look like, I clicked the Save and Run button. Pipelines committed the <code>azure-pipelines.yml</code> file to my repository and started a build. Nice. With that file committed to the repository, this should make it very easy to define, and version, my build pipeline.</p>
+
+<h3 id="commit-push-build">Commit, Push, Build</h3>
+
+<p>With the pipeline YAML file in my repo, I could edit the pipeline from Visual Studio Code. The process was easy to understand: change the script step, commit the change, push to the repository. As soon as I pushed the code, Pipelines was running a build with those changes. As with other CI services I&rsquo;ve used, I ran into the problem of not being able to run locally before I commit and push. I didn&rsquo;t spend much time trying to find a way to test locally, but it would be nice to have more confidence in my changes before I commit the code.</p>
+
+<p>While working out how to build my Function App, I ran into trouble with the documentation. The starter script shows only script steps, but the documentation I read used tasks. The concept of tasks isn&rsquo;t new to me, but I didn&rsquo;t see any links to what tasks are available in Pipelines. It took me a half hour before I stumbled on the <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks">documentation for Tasks</a>. The documentation for the tasks themselves is fairly clear, but the descriptions of the properties were confusing to me. For example, the <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/dotnet-core-cli?view=vsts">dotnet core cli Task</a> has a whole host of inputs. Each input is documented, but the table describing the inputs below doesn&rsquo;t exactly match the name of the input. I couldn&rsquo;t tell what <code>Zip Published Projects</code> matched to in the actual inputs. Maybe <code>zipAfterPublish</code>? Once I got my build where I thought I needed it to be, I was ready to move on to how to deploy my code.</p>
+
+<h2 id="on-to-the-release-pipeline">On to the Release Pipeline</h2>
+
+<p>The Release Pipeline doesn&rsquo;t seem to be versioned the same way as the build pipeline. That is somewhat understandable, but also felt strange when I realized that. Since I couldn&rsquo;t version the pipeline, I went through the site to create my release pipeline. You get a nice prompt suggesting starter release pipelines for many different types of application as you can see below:</p>
+
+<p><img src="/images/posts/azure-devops-release-pipeline.png" alt="Azure DevOps release pipeline template selection" /></p>
+
+<p>Since I was deploying a Function App, I searched for &ldquo;function&rdquo; and found a template available and selected it.</p>
+
+<h2 id="deploying-my-function-app">Deploying my Function App</h2>
+
+<p>Once I selected the template I was shown the UI for managing the release pipeline. The Azure Function template is very simple, which was a great place to start.</p>
+
+<p><img src="/images/posts/azure-devops-release-template-for-function.png" alt="The default Azure Function release pipeline" /></p>
+
+<p>After looking at the overview of the function, I realized I needed to click on the <code>1 job, 1 task</code> section. From there, all I had to do was fill out the required information for my Function App. This consisted of the Azure Subscription I wanted to use and then the App Service for the Function App I was deploying. Pretty easy.</p>
+
+<p>So now that I had that configured, the next step was to get the artifacts from my build pipeline into my release pipeline. I clicked on the &ldquo;Add an artifact&rdquo; option under the Artifacts section of the Release pipeline and I picked my source pipeline as well as selected using the Latest build. There are several options under what build version the pipeline can use but Latest fit what I was trying to do.</p>
+
+<p>Now that my pipeline was ready, I created a release and went to get to deploy my code. But I couldn&rsquo;t, the release couldn&rsquo;t find any artifacts for me to find. With that, I went back to the build pipeline to try and figure out how I get artifacts published so that the Release pipeline could use them.</p>
+
+<p>This took several attempts to figure out what I needed to do to promote my artifacts. At first, I thought that I needed to call <code>dotnet publish</code> and push the output into Azure DevOps <code>Build.ArtifactStagingDirectory</code>. At the time, I was trying to understand if Azure DevOps then picked up the staged artifacts and published them after the build passed. This was not correct and my attempted deployment failed because there were no artifacts to deploy.</p>
+
+<p>My second attempt was to then publish the app and then zip the contents into the Staging Directory. Still no luck, but it felt like I was on the right track, I was just missing something. And indeed I was missing something, I then found the <code>PublishArtifacts</code> task. I updated my build process to publish the zip file that I had placed in the staging directory and then my release pipeline worked! I now had a working Azure Function and a simple build and release pipeline. All within the course of an evening. Not bad.</p>
+
+<h2 id="impressions-of-azure-devops">Impressions of Azure DevOps</h2>
+
+<p>I am quite pleased by what I&rsquo;ve used in Azure DevOps. Rebranding VSTS to Azure DevOps was a smart move, VSTS had baggage that it was only for Microsoft applications. With the new name, I was interested enough to give it a try. The pipeline YAML file is a great way to manage the build process. I&rsquo;m glad to see that Microsoft recognized what Travis CI, Appveyor and others have been doing and followed that process. Defining my release process was extremely easy, and from what I can tell, extremely powerful. I do find it strange my release process isn&rsquo;t versioned the same way as the build process though. I would be curious to see what that file would look like.</p>
+
+<p>I did have some hurdles finding documentation that was clear on how to hook up the build and release pipeline as well as describing where tasks were. These were annoying, but I did manage to figure out everything in a relatively short amount of time. The documentation was helpful, but like most documentation, always can use some more work and clarity. I&rsquo;m confident Microsoft will keep improving this area of Azure DevOps.</p>
+
+<p>Overall it was a great experience and I plan on still using Azure DevOps. I also plan on bringing this to my coworkers and investigating if it makes sense for us to start trying out Azure DevOps at work as well.</p>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/smerrell">
+    <img alt="Image of Sam Merrell" class="avatar avatar--small" src="https://smerrell.github.io/images/avatar.jpg">
+    <div>
+        <span class="dark">Sam Merrell</span>
+        <span>I like to learn new things.</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsmerrell.github.io%2fposts%2fazure-devops-pipelines-with-functions%2f - Azure%20DevOps%20Exploration by @smerrell">
+  <span class="icon-twitter"> Tweet</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/2018/09/28/azure-web-apps-for-containers-using-terraform/">Azure Web App for Containers Using Terraform<aside class="dates">Sep 28 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2017/11/getting-to-know-swift/">Getting to Know Swift<aside class="dates">Nov 4 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016/03/discovering-podcasts/">Discovering Podcasts<aside class="dates">Mar 16 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016/02/keeping-up-with-javascript/">Keeping up with JavaScript<aside class="dates">Feb 9 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2016/01/using-qdslrdashboard-with-the-sony-a6000/">Using qDslrDashboard with the Sony a6000<aside class="dates">Jan 2 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2015/12/learning-rust-as-a-csharp-developer/">Learning Rust as a C# Developer<aside class="dates">Dec 23 2015</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/12/agile-is-hard/">Agile is Hard<aside class="dates">Dec 14 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/12/make-testing-easy/">Make Testing Easy<aside class="dates">Dec 6 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/12/looking-back-development-retrospective/">Looking Back: Development Retrospective<aside class="dates">Dec 1 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/2012/11/giving-sublime-text-2-a-try/">Giving Sublime Text 2 A Try<aside class="dates">Nov 18 2012</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/smerrell">
+        roundedgithub
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/smerrell">
+        roundedtwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 Sam Merrell
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script async src="https://smerrell.github.io/js/main.js"></script>
+
+
+
+</body>
+</html>
